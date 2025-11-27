@@ -529,7 +529,14 @@
             justify-content: center;
             text-align: center;
             display: grid;
-            gap: 1.5rem;
+            gap: 20px;
+        }
+
+        .section-text-container .list {
+            text-align: left;
+            font-size: 30px;
+            font-weight: 400;
+            text-align: left;
         }
 
         .section-text-container h1 {
@@ -543,13 +550,6 @@
             font-size: 54px;
             font-weight: 500;
             line-height: 1;
-        }
-
-        .section-text-container p {
-            font-size: 30px;
-            font-weight: 400;
-            text-align: left;
-            line-height: 58px;
         }
 
         /* --- SECTION: MULTI-IMAGE --- */
@@ -726,7 +726,7 @@
             background-color: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
             cursor: default;
-            border: 2px solid rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.5);
             transition: background-color 0.3s;
         }
 
@@ -1123,13 +1123,19 @@
 
             .section-text-container {
                 padding: 1rem;
+                gap: 12px;
+            }
+
+            .section-text-container .list {
+                font-size: 18px;
+                text-align: left;
             }
 
             .section-text-container h1 {
                 font-size: 32px;
-                font-weight: 500;
+                font-weight: 600;
                 margin: 0;
-                line-height: 1;
+                line-height: 40px;
             }
 
             .section-text-container h2 {
@@ -1137,13 +1143,6 @@
                 font-weight: 500;
                 line-height: 1;
             }
-
-            .section-text-container p {
-                font-size: 18px;
-                font-weight: 500;
-                text-align: left;
-            }
-
             .content-section-6 {
                 display: none;
                 min-height: auto;
@@ -1548,14 +1547,14 @@
                 HOMEPRO WASTE MANAGEMENT
             </h1>
             <h2>โฮมโปรมีวิธีจัดการขยะอย่างยั่งยืน ดังนี้</h2>
-            <div>
-                <p>1. เก็บและคัดแยกขยะเบื้องต้นจาก 3 แหล่งที่มา คือ จากลูกค้า, พนักงาน / จากการดำเนินกิจการ /
-                    จากโครงการแลกเก่าเพื่อโลกใหม่ </p>
-                <p>2. ส่งต่อให้กับพันธมิตรเพื่อแยกส่วน / บด / ล้าง / หลอม / กำจัด / รีไซเคิล อย่างละเอียดในทุก
-                    กระบวนการและเป็นไปตามาตรฐานสากล </p>
-                <p>3. นำอุปกรณ์และชิ้นส่วนที่ไม่สามารถใช้งานได้เข้าสู่กระบวนการกำจัดอย่างถูกวิธี และนำวัสดุที่
+            <ol class="list">
+                <li>เก็บและคัดแยกขยะเบื้องต้นจาก 3 แหล่งที่มา คือ จากลูกค้า, พนักงาน / จากการดำเนินกิจการ /
+                    จากโครงการแลกเก่าเพื่อโลกใหม่ <lli>
+                <li>ส่งต่อให้กับพันธมิตรเพื่อแยกส่วน / บด / ล้าง / หลอม / กำจัด / รีไซเคิล อย่างละเอียดในทุก
+                    กระบวนการและเป็นไปตามาตรฐานสากล </li>
+                <li>นำอุปกรณ์และชิ้นส่วนที่ไม่สามารถใช้งานได้เข้าสู่กระบวนการกำจัดอย่างถูกวิธี และนำวัสดุที่
                     สามารถรีไซเคิลได้กลับมาผลิตสินค้าใหม่เพื่อจำหน่าย</p>
-            </div>
+            </ol>
         </section>
 
         <section class="section-img-multi">
