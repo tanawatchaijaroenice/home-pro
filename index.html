@@ -132,7 +132,7 @@
             font-style: italic;
         }
 
-        /* Base Styles & Font */
+        /* --- GENERAL STYLES --- */
         body {
             font-family: "Prompt", sans-serif;
             margin: 0;
@@ -140,7 +140,7 @@
             color: #333;
         }
 
-        /* Global Container for Centering and Max Width */
+        /* --- LAYOUT --- */
         .global-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -149,19 +149,10 @@
             gap: 40px;
         }
 
-        /* General H2 Style (Applies to H2 elements) */
-        h2 {
-            color: #007bff;
-            font-size: 2rem;
-            margin-top: 0;
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
+        /* --- SECTION 1: HERO --- */
         .section-1 {
             position: relative;
-            height: 300px;
+            min-height: 300px;
             border-radius: 12px;
             overflow: hidden;
             display: flex;
@@ -169,8 +160,6 @@
             justify-content: center;
             text-align: center;
             color: white;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
         }
 
         .section-1::before {
@@ -186,7 +175,6 @@
             z-index: 1;
         }
 
-        /* Dark Overlay for Readability */
         .section-1::after {
             content: '';
             position: absolute;
@@ -197,7 +185,6 @@
             z-index: 2;
         }
 
-        /* Content Positioning */
         .section-1-hero-content {
             position: relative;
             z-index: 3;
@@ -208,7 +195,6 @@
             padding: 20px;
         }
 
-        /* Row 1: Main Title Style (Desktop Base) */
         .section-1-hero-title {
             font-size: 58px;
             font-weight: 500;
@@ -217,6 +203,39 @@
             letter-spacing: 1px;
         }
 
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .info-box {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .box-header-row {
+            margin-bottom: 5px;
+        }
+
+        .box-text {
+            font-size: 24px;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .large-number {
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-top: 5px;
+        }
+
+        /* --- SECTION 2: INTRODUCTION --- */
         .section-2 {
             position: relative;
             min-height: 400px;
@@ -228,7 +247,6 @@
             justify-content: center;
             text-align: center;
             color: white;
-
         }
 
         .section-2::before {
@@ -269,51 +287,10 @@
             letter-spacing: 1px;
         }
 
-        /* Row 2: Boxes Container */
-        .box-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 15px;
-        }
-
-        /* New Wrapper for the top two text lines (Default: block) */
-        .box-header-row {
-            /* Default display is block, so p tags inside stack naturally on desktop */
-            margin-bottom: 5px;
-        }
-
-        /* Individual Box Style */
-        .info-box {
-            flex: 1;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        /* Text Style for Box Headers (Desktop Base) */
-        .box-text {
-            font-size: 24px;
-            font-weight: 400;
-            margin: 0;
-            line-height: 1.4;
-            text-align: center;
-        }
-
-        /* Text Style for Large Numbers (Desktop Base) */
-        .large-number {
-            font-size: 60px;
-            font-weight: 500;
-            line-height: 1.2;
-            margin-top: 5px;
-        }
-
-
-        /* --- SECTION 3: Circularity Grid --- */
+        /* --- SECTION 3: CIRCULARITY GRID --- */
         .section-3 {
             display: grid;
             grid-template-columns: 0.5fr 1fr 0.5fr;
-
         }
 
         .section-3 .section-3-main-side {
@@ -352,22 +329,31 @@
             margin: 0;
         }
 
-        /* --- SECTION 4: VIDEO EMBED (content-section-3 in original) --- */
+        /* --- SECTION 4: VIDEO --- */
         .content-section-3 {
             border-radius: 12px;
-
             text-align: center;
         }
 
         .video-wrapper {
             position: relative;
             width: 100%;
-            /* padding-bottom: 56.25%; */
-            /* height: 0; */
             height: 99%;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- SECTION 5: HALF GRID SECTIONS --- */
+        .section-main-half-grid {
+            display: grid;
+            gap: .5rem;
         }
 
         .section-half-grid {
@@ -434,33 +420,30 @@
 
         .half-right-content p {
             margin: 0;
-            line-height: 1.2;
             color: #ffffff;
             padding: 5px 0;
         }
 
         .text-line-1 {
+            line-height: 80px;
             font-size: 62px;
-            color: #007bff;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .text-line-2 {
+            line-height: 60px;
             font-size: 42px;
-            /* 42px */
             color: #333;
         }
 
         .text-line-3 {
             font-size: 30px;
             font-weight: 300;
-            color: #6c757d;
             margin-top: 3rem !important;
+            line-height: 48px !important;
         }
 
-
-
-        /* --- RESPONSIVE ADJUSTMENTS START --- */
+        /* --- RESPONSIVE ADJUSTMENTS --- */
 
         /* 1. Tablet Adjustments (<= 1024px) */
         @media (max-width: 1024px) {
@@ -517,14 +500,17 @@
 
             .section-half-grid .text-line-1 {
                 font-size: 6vw;
+                line-height: unset !important;
             }
 
             .section-half-grid .text-line-2 {
                 font-size: 4vw;
+                line-height: unset !important;
             }
 
             .section-half-grid .text-line-3 {
                 font-size: 3vw;
+                line-height: unset !important;
                 margin-top: 0 !important;
             }
 
@@ -742,9 +728,9 @@
 
         <section class="section-1">
             <div class="section-1-hero-content">
-                <h1 class="section-1-hero-title">
+                <p class="section-1-hero-title">
                     HOMEPRO NET ZERO REAL-TIME
-                </h1>
+                </p>
 
                 <div class="box-container">
                     <div class="info-box">
@@ -777,18 +763,18 @@
 
         <section class="section-2">
             <div class="section-2-hero-content">
-                <h1 class="section-2-title">
+                <h2 class="section-2-title">
                     โฮมโปร เป็นผู้ค้าปลีกรายแรกของไทย ที่นำหลักเศรษฐกิจหมุนเวียน (Circular Economy)
-                </h1>
+                </h2>
 
-                <div class="section-2-content">
+                <h3 class="section-2-content">
                     มาปรับใช้ในธุรกิจ ภายใต้โครงการ Closed-Loop Circularity เพื่อลดผลกระทบต่อสิ่งแวดล้อม พร้อม
                     ขับเคลื่อนธุรกิจอย่างยั่งยืนเน้นใช้ทรัพยากรอย่างคุ้มค่า ลดขยะ
                     และลดการใช้ทรัพยากรใหม่อย่างมีประสิทธิภาพ โดยเปิดรับคืนของเก่าที่ไม่ใช้แล้วจากบ้านลูกค้าโฮมโปร
                     และช่วยนำมาจัดการอย่างถูกวิธี รีไซเคิล ภายใต้ โครงการ “แลกเก่าเพื่อโลกใหม่” พร้อมผลิตเป็นสินค้าใหม่
                     ที่มีคุณภาพกลับมาจำหน่ายเป็น “สินค้ารักษ์โลก” (Circular Products) เพื่อลดผลกระทบต่อสิ่งแวดล้อม
                     และขับเคลื่อนองค์กรสู่ความยั่งยืน
-                </div>
+                </h3>
             </div>
         </section>
 
@@ -843,58 +829,60 @@
 
         <section class="content-section-3">
             <div class="video-wrapper">
-                <video controls poster="images/Desktop/04-vdo.jpg" width="100%">
+                <video controls poster="images/Desktop/04-vdo.jpg">
                     <source src="/video/Revise Loop 1.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
 
-
-        <section class="section-half-grid bg-repair">
-            <div class="half-left-empty">
-            </div>
-            <div class="half-right-content">
-                <p class="text-line-1">Repair Service Center</p>
-                <p class="text-line-2">บริการศูนย์ช่างมืออาชีพ ทั่วประเทศ</p>
-                <p class="text-line-3">ด้วยทีมช่างโฮมโปร มือโปรประจำบ้านคุณ ผู้เชี่ยวชาญที่ช่วยยืดอายุการใช้งานสินค้า
-                    ได้ยาวนานขึ้นดีต่อเรา ดีต่อโลก</p>
-            </div>
-        </section>
-
-        <section class="section-half-grid bg-tradein">
-            <div class="half-left-empty">
-            </div>
-            <div class="half-right-content">
-                <p class="text-line-1">Trade-In</p>
-                <p class="text-line-2">โครงการ “แลกเก่าเพื่อโลกใหม่”</p>
-                <p class="text-line-3">นำของเก่ามาแลกรับส่วนลด เมื่อซื้อสินค้าใหม่ พร้อมฟรีค่าติดตั้ง รื้อถอน*
-                    และได้จัดการของเก่าอย่างถูกวิธี
-                </p>
-                <p class="bottom-position">*ภายใต้เงื่อนไขที่บริษัทกำหนด / โปรดตรวจสอบรายละเอียดเพิ่มเติม ณ จุดขาย /
-                    เฉพาะสินค้าที่ร่วมรายการ</p>
-            </div>
-
-        </section>
-
-        <a href="/Waste_Management_TH.html" style="text-decoration: none;">
-            <section class="section-half-grid bg-waste">
-                <div class="half-left-empty"> </div>
-                <div class="half-right-content">
-                    <p class="text-line-1">Waste Management</p>
-                    <p class="text-line-2">สินค้าเก่าเราจัดการ อย่างถูกวิธี</p>
-                    <p class="text-line-3">รักษ์โลกอย่างมั่นใจ ด้วยการจัดการ อย่างถูกวิธีและการผลิตที่ตรวจสอบได้</p>
+        <section class="section-main-half-grid">
+            <div class="section-half-grid bg-repair">
+                <div class="half-left-empty">
                 </div>
-            </section>
-        </a>
-
-        <section class="section-half-grid bg-circular">
-            <div class="half-left-empty">
+                <div class="half-right-content">
+                    <p class="text-line-1">Repair Service Center</p>
+                    <p class="text-line-2">บริการศูนย์ช่างมืออาชีพ ทั่วประเทศ</p>
+                    <p class="text-line-3">ด้วยทีมช่างโฮมโปร มือโปรประจำบ้านคุณ
+                        ผู้เชี่ยวชาญที่ช่วยยืดอายุการใช้งานสินค้า
+                        ได้ยาวนานขึ้นดีต่อเรา ดีต่อโลก</p>
+                </div>
             </div>
-            <div class="half-right-content">
-                <p class="text-line-1">Circular Products</p>
-                <p class="text-line-2">สินค้ารักษ์โลก จากวัสดุหมุนเวียน</p>
-                <p class="text-line-3">ร่วมเป็นส่วนหนึ่งสร้างโลกที่ยั่งยืน ด้วยผลิตภัณฑ์ที่เป็นมิตรต่อสิ่งแวดล้อม
-                    ซึ่งผลิตจากวัสดุรีไซเคิล PCR ที่เก็บจากบ้านคุณ</p>
+
+            <div class="section-half-grid bg-tradein">
+                <div class="half-left-empty">
+                </div>
+                <div class="half-right-content">
+                    <p class="text-line-1">Trade-In</p>
+                    <p class="text-line-2">โครงการ “แลกเก่าเพื่อโลกใหม่”</p>
+                    <p class="text-line-3">นำของเก่ามาแลกรับส่วนลด เมื่อซื้อสินค้าใหม่ พร้อมฟรีค่าติดตั้ง รื้อถอน*
+                        และได้จัดการของเก่าอย่างถูกวิธี
+                    </p>
+                    <p class="bottom-position">*ภายใต้เงื่อนไขที่บริษัทกำหนด / โปรดตรวจสอบรายละเอียดเพิ่มเติม ณ จุดขาย /
+                        เฉพาะสินค้าที่ร่วมรายการ</p>
+                </div>
+
+            </div>
+
+            <a href="/Waste_Management_TH.html" style="text-decoration: none;">
+                <div class="section-half-grid bg-waste">
+                    <div class="half-left-empty"> </div>
+                    <div class="half-right-content">
+                        <p class="text-line-1">Waste Management</p>
+                        <p class="text-line-2">สินค้าเก่าเราจัดการ อย่างถูกวิธี</p>
+                        <p class="text-line-3">รักษ์โลกอย่างมั่นใจ ด้วยการจัดการ อย่างถูกวิธีและการผลิตที่ตรวจสอบได้</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="section-half-grid bg-circular">
+                <div class="half-left-empty">
+                </div>
+                <div class="half-right-content">
+                    <p class="text-line-1">Circular Products</p>
+                    <p class="text-line-2">สินค้ารักษ์โลก จากวัสดุหมุนเวียน</p>
+                    <p class="text-line-3">ร่วมเป็นส่วนหนึ่งสร้างโลกที่ยั่งยืน ด้วยผลิตภัณฑ์ที่เป็นมิตรต่อสิ่งแวดล้อม
+                        ซึ่งผลิตจากวัสดุรีไซเคิล PCR ที่เก็บจากบ้านคุณ</p>
+                </div>
             </div>
         </section>
 
