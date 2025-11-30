@@ -106,7 +106,7 @@
   background-position: center;
 }
 
-.mission-section__content h1 {
+.mission-section__content h2 {
   font-size: 90px;
   color: var(--color-text-inverse);
   font-weight: 500;
@@ -147,7 +147,7 @@
   gap: var(--spacing-base);
 }
 
-.mobile-only__box h1 {
+.mobile-only__box h2 {
   font-size: 54px;
   line-height: 58px;
   text-align: center;
@@ -178,13 +178,13 @@
   font-weight: 400;
 }
 
-.waste-info h1 {
+.waste-info h2 {
   font-size: 72px;
   font-weight: 600;
   line-height: 1;
 }
 
-.waste-info h2 {
+.waste-info h3 {
   font-size: 54px;
   font-weight: 500;
   line-height: 1;
@@ -244,7 +244,7 @@
 }
 
 /* Waste Solutions */
-.waste-solutions h1 {
+.waste-solutions h2 {
   font-size: 72px;
   text-align: center;
   font-weight: 600;
@@ -348,18 +348,11 @@
   gap: var(--spacing-base);
 }
 
-.service-cards--bottom .service-card .service-card__content h1 {
+.service-cards--bottom .service-card .service-card__content h3 {
   padding: 0;
   font-size: 72px;
   color: var(--color-text-inverse);
   font-weight: 500;
-}
-
-.service-cards--bottom .service-card .service-card__content h2 {
-  font-weight: 500;
-  padding: 0;
-  font-size: 60px;
-  color: var(--color-text-inverse);
 }
 
 .service-cards--bottom .service-card .service-card__content p {
@@ -372,7 +365,7 @@
    RESPONSIVE: TABLET (<= 1024px)
    ============================================ */
 @media (max-width: 1024px) {
-  .mission-section__content h1 {
+  .mission-section__content h2 {
     font-size: 80px;
   }
 
@@ -406,12 +399,12 @@
     font-size: 18px;
   }
 
-  .waste-info h1 {
+  .waste-info h2 {
     font-size: 32px;
     line-height: 40px;
   }
 
-  .waste-info h2 {
+  .waste-info h3 {
     font-size: 21px;
   }
 
@@ -427,7 +420,7 @@
     display: flex;
   }
 
-  .waste-solutions h1 {
+  .waste-solutions h2 {
     font-size: 32px;
   }
 
@@ -534,12 +527,7 @@
     text-align: left;
   }
 
-  .service-cards--bottom .service-card .service-card__content h1 {
-    font-size: 28px;
-    text-align: left;
-  }
-
-  .service-cards--bottom .service-card .service-card__content h2 {
+  .service-cards--bottom .service-card .service-card__content h3 {
     font-size: 28px;
     text-align: left;
     line-height: 34px;

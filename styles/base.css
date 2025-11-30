@@ -194,6 +194,34 @@ p {
   color: var(--color-brand-blue);
 }
 
+/* Skip to main content link (accessibility) */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.sr-only:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  z-index: 9999;
+  padding: 10px;
+  background: var(--color-brand-green);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  border-radius: var(--border-radius-small);
+  top: 10px;
+  left: 10px;
+}
+
 /* ============================================
    LAYOUT
    ============================================ */

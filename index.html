@@ -3,15 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Circular Economy TH</title>
+    <title>HomePro Net Zero - เศรษฐกิจหมุนเวียน | Circular Economy</title>
+    <meta
+      name="description"
+      content="โฮมโปรนำหลักเศรษฐกิจหมุนเวียน (Circular Economy) มาปรับใช้ในธุรกิจ ภายใต้โครงการ Closed-Loop Circularity เพื่อลดผลกระทบต่อสิ่งแวดล้อมและขับเคลื่อนธุรกิจอย่างยั่งยืน"
+    />
+    <meta
+      name="keywords"
+      content="โฮมโปร, เศรษฐกิจหมุนเวียน, circular economy, net zero, ความยั่งยืน, รีไซเคิล, แลกเก่าเพื่อโลกใหม่, สินค้ารักษ์โลก"
+    />
+    <meta name="author" content="HomePro" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HomePro Net Zero - เศรษฐกิจหมุนเวียน" />
+    <meta
+      property="og:description"
+      content="โฮมโปรนำหลักเศรษฐกิจหมุนเวียน (Circular Economy) มาปรับใช้ในธุรกิจ เพื่อลดผลกระทบต่อสิ่งแวดล้อม"
+    />
+    <meta property="og:image" content="/images/Desktop/01-Hp Net zero.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HomePro Net Zero - เศรษฐกิจหมุนเวียน" />
+    <meta
+      name="twitter:description"
+      content="โฮมโปรนำหลักเศรษฐกิจหมุนเวียน (Circular Economy) มาปรับใช้ในธุรกิจ เพื่อลดผลกระทบต่อสิ่งแวดล้อม"
+    />
+
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
   <body>
-    <div class="container">
-      <section class="hero-banner hero-banner--circular">
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="sr-only">ข้ามไปยังเนื้อหาหลัก</a>
+
+    <main class="container">
+      <section
+        class="hero-banner hero-banner--circular"
+        aria-label="แบนเนอร์หลัก"
+      >
         <div class="hero-banner__content">
-          <p class="hero-banner__title">HOMEPRO NET ZERO REAL-TIME</p>
+          <h1 class="hero-banner__title">HOMEPRO NET ZERO REAL-TIME</h1>
 
           <div class="stats-container">
             <div class="stats-card">
@@ -60,10 +93,13 @@
         </div>
       </section>
 
-      <section class="circularity-grid">
+      <section class="circularity-grid" aria-label="กระบวนการเศรษฐกิจหมุนเวียน">
         <div class="circularity-grid__side circularity-grid__side--1">
           <div class="circularity-item">
-            <img src="/images/Desktop/circle_icon01.svg" alt="รูปภาพ 1" />
+            <img
+              src="/images/Desktop/circle_icon01.svg"
+              alt="ไอคอนสินค้ารักษ์โลก"
+            />
             <div>
               <p class="circularity-item__title">สินค้ารักษ์โลก</p>
               <p class="circularity-item__description">
@@ -74,7 +110,7 @@
             </div>
           </div>
           <div class="circularity-item">
-            <img src="/images/Desktop/circle_icon03.svg" alt="รูปภาพ 2" />
+            <img src="/images/Desktop/circle_icon03.svg" alt="ไอคอนจัดการขยะ" />
             <div>
               <p class="circularity-item__title">จัดการขยะอย่างถูกวิธี</p>
               <p class="circularity-item__description">
@@ -85,11 +121,14 @@
           </div>
         </div>
         <div class="circularity-grid__center">
-          <img src="/images/Desktop/cycle_shadow.svg" alt="รูปภาพกลาง" />
+          <img
+            src="/images/Desktop/cycle_shadow.svg"
+            alt="วงจรเศรษฐกิจหมุนเวียน"
+          />
         </div>
         <div class="circularity-grid__side circularity-grid__side--2">
           <div class="circularity-item">
-            <img src="/images/Desktop/circle_icon02.svg" alt="รูปภาพ 3" />
+            <img src="/images/Desktop/circle_icon02.svg" alt="ไอคอนศูนย์ซ่อม" />
             <div>
               <p class="circularity-item__title">ศูนย์ซ่อมมืออาชีพ</p>
               <p class="circularity-item__description">
@@ -100,7 +139,10 @@
             </div>
           </div>
           <div class="circularity-item">
-            <img src="/images/Desktop/circle_icon04.svg" alt="รูปภาพ 4" />
+            <img
+              src="/images/Desktop/circle_icon04.svg"
+              alt="ไอคอนแลกเก่าเพื่อโลกใหม่"
+            />
             <div>
               <p class="circularity-item__title">โครงการแลกเก่าเพื่อโลกใหม่</p>
               <p class="circularity-item__description">
@@ -113,10 +155,15 @@
         </div>
       </section>
 
-      <section class="video-section">
+      <section class="video-section" aria-label="วิดีโอแสดงกระบวนการ">
         <div class="video-section__wrapper">
-          <video controls poster="images/Desktop/04-vdo.jpg">
+          <video
+            controls
+            poster="images/Desktop/04-vdo.jpg"
+            aria-label="วิดีโอโครงการ Closed-Loop Circularity"
+          >
             <source src="/video/Revise Loop 1.mp4" type="video/mp4" />
+            <track kind="captions" label="Thai" />
           </video>
         </div>
       </section>
@@ -185,6 +232,6 @@
           </div>
         </div>
       </section>
-    </div>
+    </main>
   </body>
 </html>

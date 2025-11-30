@@ -3,13 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Waste Management TH</title>
+    <title>HomePro Net Zero - การจัดการขยะ | Waste Management</title>
+    <meta
+      name="description"
+      content="การจัดการขยะอย่างยั่งยืนของโฮมโปร คัดแยกขยะ รีไซเคิล และกำจัดอย่างถูกวิธี เพื่อสิ่งแวดล้อมและลดคาร์บอนฟุตพริ้น"
+    />
+    <meta
+      name="keywords"
+      content="โฮมโปร, จัดการขยะ, waste management, รีไซเคิล, สารทำความเย็น, การกำจัดขยะอย่างถูกวิธี, ความยั่งยืน"
+    />
+    <meta name="author" content="HomePro" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HomePro Net Zero - การจัดการขยะ" />
+    <meta
+      property="og:description"
+      content="การจัดการขยะอย่างยั่งยืนของโฮมโปร คัดแยกขยะ รีไซเคิล และกำจัดอย่างถูกวิธี"
+    />
+    <meta
+      property="og:image"
+      content="/images/Desktop/05-HomePro waste management.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HomePro Net Zero - การจัดการขยะ" />
+    <meta
+      name="twitter:description"
+      content="การจัดการขยะอย่างยั่งยืนของโฮมโปร คัดแยกขยะ รีไซเคิล และกำจัดอย่างถูกวิธี"
+    />
+
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
   <body>
-    <div class="container">
-      <section class="hero-banner hero-banner--waste">
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="sr-only">ข้ามไปยังเนื้อหาหลัก</a>
+
+    <main class="container">
+      <section class="hero-banner hero-banner--waste" aria-label="แบนเนอร์หลัก">
         <div class="hero-banner__content">
           <h1 class="hero-banner__title">HOMEPRO NET ZERO REAL-TIME</h1>
 
@@ -42,22 +75,30 @@
       <div class="iframe-embed">
         <iframe
           src="https://circularstory.homepro.co.th/th"
+          title="เว็บไซต์ Circular Story ของ HomePro"
           frameborder="0"
           marginheight="0"
           marginwidth="0"
           width="100%"
           scrolling="no"
+          aria-label="เนื้อหาภายนอก: Circular Story"
         ></iframe>
       </div>
 
       <section class="circular-banner">
-        <h1 class="circular-banner__title">CIRCULAR PRODUCTS</h1>
+        <h2 class="circular-banner__title">CIRCULAR PRODUCTS</h2>
       </section>
 
-      <section class="video-section">
+      <section class="video-section" aria-label="วิดีโอแสดงกระบวนการ">
         <div class="video-section__wrapper">
-          <video controls poster="images/Desktop/04-vdo.jpg" width="100%">
+          <video
+            controls
+            poster="images/Desktop/04-vdo.jpg"
+            width="100%"
+            aria-label="วิดีโอ Circular Products"
+          >
             <source src="/video/Revise Loop 1.mp4" type="video/mp4" />
+            <track kind="captions" label="Thai" />
           </video>
         </div>
       </section>
@@ -65,7 +106,7 @@
       <section class="mission-section">
         <div class="mission-section__empty"></div>
         <div class="mission-section__content">
-          <h1>โฮมโปร</h1>
+          <h2>โฮมโปร</h2>
           <h3>พร้อมยืนหยัดเพื่อสังคม และสร้างโลกที่ดีในอนาคต</h3>
         </div>
       </section>
@@ -73,10 +114,10 @@
       <section class="mobile-only mobile-only--blue">
         <img
           src="/images/Desktop/center_circle_icon.svg"
-          alt="โฮมโปรพร้อมยืนหยัด"
+          alt="ไอคอนวงจรเศรษฐกิจหมุนเวียน"
         />
         <div class="mobile-only__box">
-          <h1>โฮมโปร</h1>
+          <h2>โฮมโปร</h2>
           <h3>พร้อมยืนหยัดเพื่อสังคม และสร้างโลกที่ดีในอนาคต</h3>
         </div>
       </section>
@@ -84,14 +125,14 @@
       <section class="mobile-only">
         <img
           src="/images/Mobile/05.2-โฮมโปรพร้อมยืนหยัด.jpg"
-          alt="โฮมโปรพร้อมยืนหยัด"
+          alt="ภาพประกอบโครงการความยั่งยืนของโฮมโปร"
           width="100%"
         />
       </section>
 
       <section class="waste-info">
-        <h1 class="text--brand-green">HOMEPRO WASTE MANAGEMENT</h1>
-        <h2>โฮมโปรมีวิธีจัดการขยะอย่างยั่งยืน ดังนี้</h2>
+        <h2 class="text--brand-green">HOMEPRO WASTE MANAGEMENT</h2>
+        <h3>โฮมโปรมีวิธีจัดการขยะอย่างยั่งยืน ดังนี้</h3>
         <ol class="waste-info__list">
           <li>
             เก็บและคัดแยกขยะเบื้องต้นจาก 3 แหล่งที่มา คือ จากลูกค้า, พนักงาน /
@@ -124,31 +165,35 @@
         </div>
       </section>
 
-      <section class="waste-solutions">
-        <h1 class="text--brand-green">PROPER WASTE MANAGEMENT</h1>
+      <section class="waste-solutions" aria-label="การจัดการขยะอย่างถูกวิธี">
+        <h2 class="text--brand-green">PROPER WASTE MANAGEMENT</h2>
         <div class="waste-solutions__grid">
           <div class="solution-card solution-card--image">
-            <div class="carousel">
+            <div
+              class="carousel"
+              role="region"
+              aria-label="แกาเลอรี่ภาพสารทำความเย็น"
+            >
               <div class="carousel__container">
                 <div class="carousel__track">
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1386.jpg"
-                      alt="รูปภาพสไลด์ A"
+                      alt="กระบวนการจัดการสารทำความเย็น - ภาพที่ 1"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1483.jpg"
-                      alt="รูปภาพสไลด์ B"
+                      alt="กระบวนการจัดการสารทำความเย็น - ภาพที่ 2"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1489.jpg"
-                      alt="รูปภาพสไลด์ C"
+                      alt="กระบวนการจัดการสารทำความเย็น - ภาพที่ 3"
                       loading="lazy"
                     />
                   </div>
@@ -166,7 +211,12 @@
                 ถึงการกำจัดอย่าง ปลอดภัย ป้องกันการรั่วไหลของ CFC ที่
                 ทำลายชั้นบรรยากาศ เพื่อสิ่งแวดล้อมและโลก ที่ยั่งยืน
               </p>
-              <button class="btn btn-outline">สินค้าร่วมโครงการ</button>
+              <button
+                class="btn btn-outline"
+                aria-label="ดูสินค้าร่วมโครงการการจัดการสารทำความเย็น"
+              >
+                สินค้าร่วมโครงการ
+              </button>
             </div>
           </div>
 
@@ -182,34 +232,38 @@
           </div>
 
           <div class="solution-card solution-card--image">
-            <div class="carousel">
+            <div
+              class="carousel"
+              role="region"
+              aria-label="แกาเลอรี่ภาพการจัดการโฟมฉนวน"
+            >
               <div class="carousel__container">
                 <div class="carousel__track">
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1442.jpg"
-                      alt="รูปภาพสไลด์ A"
+                      alt="การจัดการโฟมฉนวนจากตู้เย็น - ภาพที่ 1"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1401.jpg"
-                      alt="รูปภาพสไลด์ B"
+                      alt="การจัดการโฟมฉนวนจากตู้เย็น - ภาพที่ 2"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1444.jpg"
-                      alt="รูปภาพสไลด์ C"
+                      alt="การจัดการโฟมฉนวนจากตู้เย็น - ภาพที่ 3"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1510.jpg"
-                      alt="รูปภาพสไลด์ D"
+                      alt="การจัดการโฟมฉนวนจากตู้เย็น - ภาพที่ 4"
                       loading="lazy"
                     />
                   </div>
@@ -220,34 +274,38 @@
           </div>
 
           <div class="solution-card solution-card--image">
-            <div class="carousel">
+            <div
+              class="carousel"
+              role="region"
+              aria-label="แกาเลอรี่ภาพการจัดการทีวี CRT"
+            >
               <div class="carousel__container">
                 <div class="carousel__track">
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1227.jpg"
-                      alt="รูปภาพสไลด์ A"
+                      alt="การจัดการของเสียอันตรายจากทีวี CRT - ภาพที่ 1"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1221.jpg"
-                      alt="รูปภาพสไลด์ B"
+                      alt="การจัดการของเสียอันตรายจากทีวี CRT - ภาพที่ 2"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1316.jpg"
-                      alt="รูปภาพสไลด์ C"
+                      alt="การจัดการของเสียอันตรายจากทีวี CRT - ภาพที่ 3"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A1639.jpg"
-                      alt="รูปภาพสไลด์ D"
+                      alt="การจัดการของเสียอันตรายจากทีวี CRT - ภาพที่ 4"
                       loading="lazy"
                     />
                   </div>
@@ -284,34 +342,38 @@
           </div>
 
           <div class="solution-card solution-card--image">
-            <div class="carousel">
+            <div
+              class="carousel"
+              role="region"
+              aria-label="แกาเลอรี่ภาพการจัดการกระเบื้อง"
+            >
               <div class="carousel__container">
                 <div class="carousel__track">
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A3777.jpg"
-                      alt="รูปภาพสไลด์ A"
+                      alt="การจัดการกระเบื้องและสุขภัณฑ์ - ภาพที่ 1"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A3683.jpg"
-                      alt="รูปภาพสไลด์ B"
+                      alt="การจัดการกระเบื้องและสุขภัณฑ์ - ภาพที่ 2"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A3707.jpg"
-                      alt="รูปภาพสไลด์ C"
+                      alt="การจัดการกระเบื้องและสุขภัณฑ์ - ภาพที่ 3"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A3810.jpg"
-                      alt="รูปภาพสไลด์ C"
+                      alt="การจัดการกระเบื้องและสุขภัณฑ์ - ภาพที่ 4"
                       loading="lazy"
                     />
                   </div>
@@ -322,34 +384,38 @@
           </div>
 
           <div class="solution-card solution-card--image">
-            <div class="carousel">
+            <div
+              class="carousel"
+              role="region"
+              aria-label="แกาเลอรี่ภาพการรีไซเคิล"
+            >
               <div class="carousel__container">
                 <div class="carousel__track">
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A3735.jpg"
-                      alt="รูปภาพสไลด์ A"
+                      alt="การรีไซเคิลขยะจากบ้านลูกค้า - ภาพที่ 1"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A9740.jpg"
-                      alt="รูปภาพสไลด์ B"
+                      alt="การรีไซเคิลขยะจากบ้านลูกค้า - ภาพที่ 2"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A9759.jpg"
-                      alt="รูปภาพสไลด์ C"
+                      alt="การรีไซเคิลขยะจากบ้านลูกค้า - ภาพที่ 3"
                       loading="lazy"
                     />
                   </div>
                   <div class="carousel__item">
                     <img
                       src="/images/Desktop/0K2A9779.jpg"
-                      alt="รูปภาพสไลด์ C"
+                      alt="การรีไซเคิลขยะจากบ้านลูกค้า - ภาพที่ 4"
                       loading="lazy"
                     />
                   </div>
@@ -372,20 +438,23 @@
         </div>
       </section>
 
-      <section class="partner-logos">
-        <img src="/images/Desktop/HomePro_Logo.png" alt="HomePro_Logo" />
-        <img src="/images/Desktop/SCGC_logo.png" alt="SCGC_logo" />
-        <img src="/images/Desktop/SCG Deco_logo.png" alt="Deco_logo" />
-        <img src="/images/Desktop/SCGP_logo.png" alt="SCGP_logo" />
-        <img src="/images/Desktop/Teamplas_logo.png" alt="Teamplas_logo" />
-        <img src="/images/Desktop/HDK_logo.png" alt="HDK_logo" />
+      <section class="partner-logos" aria-label="พันธมิตรทางธุรกิจ">
+        <img src="/images/Desktop/HomePro_Logo.png" alt="โลโก้ HomePro" />
+        <img src="/images/Desktop/SCGC_logo.png" alt="โลโก้ SCGC" />
+        <img src="/images/Desktop/SCG Deco_logo.png" alt="โลโก้ SCG Deco" />
+        <img src="/images/Desktop/SCGP_logo.png" alt="โลโก้ SCGP" />
+        <img src="/images/Desktop/Teamplas_logo.png" alt="โลโก้ Teamplas" />
+        <img src="/images/Desktop/HDK_logo.png" alt="โลโก้ HDK" />
       </section>
 
-      <section class="service-cards service-cards--bottom">
+      <section
+        class="service-cards service-cards--bottom"
+        aria-label="บริการของเรา"
+      >
         <div class="service-card service-card--circular-products-bottom">
           <div class="service-card__image"></div>
           <div class="service-card__content">
-            <h1>Circular Products</h1>
+            <h3>Circular Products</h3>
             <p>สินค้ารักษ์โลก จากวัสดุหมุนเวียน</p>
           </div>
         </div>
@@ -393,7 +462,7 @@
         <div class="service-card service-card--tradein-bottom">
           <div class="service-card__image"></div>
           <div class="service-card__content">
-            <h1>Trade-In</h1>
+            <h3>Trade-In</h3>
             <p>โครงการ "แลกเก่าเพื่อโลกใหม่"</p>
           </div>
         </div>
@@ -401,11 +470,11 @@
         <div class="service-card service-card--repair-bottom">
           <div class="service-card__image"></div>
           <div class="service-card__content">
-            <h2>Repair Service Center</h2>
+            <h3>Repair Service Center</h3>
             <p>บริการศูนย์ช่างมืออาชีพทั่วประเทศ</p>
           </div>
         </div>
       </section>
-    </div>
+    </main>
   </body>
 </html>
