@@ -77,6 +77,10 @@
   z-index: 1;
 }
 
+.mission-section__empty {
+  flex: 1;
+}
+
 .mission-section__image {
   flex: 1;
   border-top-left-radius: var(--border-radius-base);
@@ -116,11 +120,15 @@
   line-height: 58px;
 }
 
-/* Mobile-Only Blue Section */
+/* Mobile-Only Sections */
+.mobile-only {
+  display: none;
+}
+
 .mobile-only--blue {
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
   flex-direction: column;
   background: var(--color-brand-blue);
   color: var(--color-text-inverse);
@@ -134,19 +142,19 @@
   max-width: 13rem;
 }
 
-.mobile-box {
+.mobile-only__box {
   display: grid;
   gap: var(--spacing-base);
 }
 
-.mobile-box h1 {
+.mobile-only__box h1 {
   font-size: 54px;
   line-height: 58px;
   text-align: center;
   font-weight: 500;
 }
 
-.mobile-box h3 {
+.mobile-only__box h3 {
   font-size: 28px;
   line-height: 34px;
   text-align: center;
@@ -409,6 +417,14 @@
 
   .mission-section {
     display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .mobile-only--blue {
+    display: flex;
   }
 
   .waste-solutions h1 {
