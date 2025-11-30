@@ -20,7 +20,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   color: var(--color-text-inverse);
 }
