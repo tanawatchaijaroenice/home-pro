@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const slides = track.querySelectorAll(".carousel__slide");
+    // Support both carousel__item and carousel__slide naming conventions
+    const slides = track.querySelectorAll(".carousel__item, .carousel__slide");
     const totalSlides = slides.length;
 
     // Generate navigation dots

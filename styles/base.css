@@ -28,8 +28,8 @@
   --section-height-hero: 300px;
 
   /* Shadows */
-  --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.05);
-  --shadow-elevated: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-elevated: 0 4px 15px rgba(0, 0, 0, 0.4);
   --shadow-carousel: 0 4px 15px rgba(0, 0, 0, 0.2);
 
   /* Transitions */

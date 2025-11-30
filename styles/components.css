@@ -120,7 +120,7 @@
   background-color: var(--color-bg-white);
   border-radius: var(--border-radius-base);
   box-shadow: var(--shadow-card);
-  padding: 3rem 5rem;
+  padding: 3rem;
   display: flex;
   min-height: var(--section-height-standard);
   gap: var(--spacing-card);
@@ -133,7 +133,6 @@
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-elevated);
 }
 
@@ -151,7 +150,6 @@
   text-align: left;
   padding: 15px 0;
   position: relative;
-  word-break: break-word;
 }
 
 .service-card__content p {
@@ -176,6 +174,7 @@
   font-weight: 300;
   margin-top: 3rem !important;
   line-height: 48px !important;
+  text-wrap: pretty;
 }
 
 .service-card__footer {
@@ -186,7 +185,7 @@
 
 /* Buttons */
 .btn {
-  font-family: "Prompt", sans-serif;
+  font-family: inherit;
   cursor: pointer;
   transition: all var(--transition-base);
   border: none;
@@ -243,16 +242,31 @@
   animation: auto-slide 15s infinite ease-in-out;
 }
 
+/* 4-item carousel track */
+.carousel__track:has(.carousel__item:nth-child(4)),
+.carousel__track:has(.carousel__slide:nth-child(4)) {
+  width: 400%;
+  animation: auto-slide-4 20s infinite ease-in-out;
+}
+
 .carousel__container:hover .carousel__track {
   animation-play-state: paused;
 }
 
-.carousel__slide {
+.carousel__slide,
+.carousel__item {
   width: 33.3333%;
   flex-shrink: 0;
 }
 
-.carousel__slide img {
+/* 4-item carousel items */
+.carousel__track:has(.carousel__item:nth-child(4)) .carousel__item,
+.carousel__track:has(.carousel__slide:nth-child(4)) .carousel__slide {
+  width: 25%;
+}
+
+.carousel__slide img,
+.carousel__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -298,6 +312,28 @@
   }
   100% {
     transform: translateX(-66.6666%);
+  }
+}
+
+@keyframes auto-slide-4 {
+  0%,
+  22% {
+    transform: translateX(0%);
+  }
+  25%,
+  47% {
+    transform: translateX(-25%);
+  }
+  50%,
+  72% {
+    transform: translateX(-50%);
+  }
+  75%,
+  97% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(-75%);
   }
 }
 
@@ -478,7 +514,8 @@
     width: auto;
   }
 
-  .carousel__slide {
+  .carousel__slide,
+  .carousel__item {
     width: 100%;
     scroll-snap-align: start;
   }

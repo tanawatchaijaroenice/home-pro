@@ -307,7 +307,7 @@
 }
 
 /* Service Card Variants - Waste Management Bottom Banners */
-.service-card--circular-bottom {
+.service-card--circular-products-bottom {
   background-image: url("../../images/Desktop/15.jpg");
   min-height: 400px;
 }
@@ -322,18 +322,18 @@
   min-height: 400px;
 }
 
-.service-card--bottom .service-card__image {
+.service-cards--bottom .service-card .service-card__image {
   flex: 1;
   display: flex;
   justify-content: right;
   align-items: center;
 }
 
-.service-card--bottom .service-card__image img {
+.service-cards--bottom .service-card .service-card__image img {
   max-width: 95%;
 }
 
-.service-card--bottom .service-card__content {
+.service-cards--bottom .service-card .service-card__content {
   flex: 1;
   flex-basis: 10%;
   border-top-right-radius: var(--border-radius-base);
@@ -348,21 +348,21 @@
   gap: var(--spacing-base);
 }
 
-.service-card--bottom .service-card__content h1 {
+.service-cards--bottom .service-card .service-card__content h1 {
   padding: 0;
   font-size: 72px;
   color: var(--color-text-inverse);
   font-weight: 500;
 }
 
-.service-card--bottom .service-card__content h2 {
+.service-cards--bottom .service-card .service-card__content h2 {
   font-weight: 500;
   padding: 0;
   font-size: 60px;
   color: var(--color-text-inverse);
 }
 
-.service-card--bottom .service-card__content p {
+.service-cards--bottom .service-card .service-card__content p {
   font-size: 36px;
   color: var(--color-text-inverse);
   font-weight: 500;
@@ -509,7 +509,7 @@
     padding: var(--spacing-card) 0;
   }
 
-  .service-card--circular-bottom {
+  .service-card--circular-products-bottom {
     background-image: url("../../images/Mobile/15-H circular.jpg");
     min-height: 15rem;
   }
@@ -524,28 +524,28 @@
     min-height: 15rem;
   }
 
-  .service-card--bottom .service-card__image {
+  .service-cards--bottom .service-card .service-card__image {
     flex: 6;
   }
 
-  .service-card--bottom .service-card__content {
+  .service-cards--bottom .service-card .service-card__content {
     flex: 4;
     align-items: flex-start;
     text-align: left;
   }
 
-  .service-card--bottom .service-card__content h1 {
+  .service-cards--bottom .service-card .service-card__content h1 {
     font-size: 28px;
     text-align: left;
   }
 
-  .service-card--bottom .service-card__content h2 {
+  .service-cards--bottom .service-card .service-card__content h2 {
     font-size: 28px;
     text-align: left;
     line-height: 34px;
   }
 
-  .service-card--bottom .service-card__content p {
+  .service-cards--bottom .service-card .service-card__content p {
     font-size: 14px;
     font-weight: 300;
     text-align: left;
