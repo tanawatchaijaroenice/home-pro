@@ -209,10 +209,20 @@
   box-shadow: var(--shadow-elevated);
 }
 
+.btn-outline:hover a {
+  color: var(--color-text-inverse);
+}
+
 .btn-outline:focus {
   outline: 3px solid var(--color-brand-green);
   outline-offset: 2px;
 }
+
+.btn-outline a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
 
 /* Mobile-Only Sections */
 .mobile-only {
@@ -301,40 +311,49 @@
 
 /* Keyframe Animations */
 @keyframes auto-slide {
+
   0%,
   28% {
     transform: translateX(0%);
   }
+
   33%,
   61% {
     transform: translateX(-33.3333%);
   }
+
   66%,
   94% {
     transform: translateX(-66.6666%);
   }
+
   100% {
     transform: translateX(-66.6666%);
   }
 }
 
 @keyframes auto-slide-4 {
+
   0%,
   22% {
     transform: translateX(0%);
   }
+
   25%,
   47% {
     transform: translateX(-25%);
   }
+
   50%,
   72% {
     transform: translateX(-50%);
   }
+
   75%,
   97% {
     transform: translateX(-75%);
   }
+
   100% {
     transform: translateX(-75%);
   }
