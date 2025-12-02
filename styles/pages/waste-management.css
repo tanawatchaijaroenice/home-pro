@@ -343,7 +343,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px 0;
+  /* padding: 15px 0; */
   line-height: 1;
   gap: var(--spacing-base);
 }
@@ -500,6 +500,10 @@
   .circular-banner__title {
     font-size: 28px;
     padding: var(--spacing-card) 0;
+  }
+
+  .service-card {
+    height: auto;
   }
 
   .service-card--circular-products-bottom {
