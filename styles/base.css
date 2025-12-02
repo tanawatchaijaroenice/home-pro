@@ -1,0 +1,234 @@
+/* ============================================
+   CSS VARIABLES (BEM-style naming)
+   ============================================ */
+:root {
+  /* Colors */
+  --color-brand-green: #367f47;
+  --color-brand-blue: #1a75bb;
+  --color-text-primary: #333;
+  --color-text-inverse: #fff;
+  --color-text-muted: #707070;
+  --color-bg-white: #fff;
+  --color-bg-overlay: rgba(0, 0, 0, 0.4);
+  --color-border-light: #d8d7d7;
+
+  /* Spacing */
+  --spacing-section: 40px;
+  --spacing-card: 20px;
+  --spacing-base: 1rem;
+  --spacing-small: 0.5rem;
+
+  /* Border Radius */
+  --border-radius-base: 12px;
+  --border-radius-small: 8px;
+  --border-radius-large: 35px;
+
+  /* Heights */
+  --section-height-standard: 640px;
+  --section-height-hero: 300px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-elevated: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-carousel: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* ============================================
+   FONT FACES
+   ============================================ */
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("../font/Prompt-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+body {
+  font-family: "Prompt", sans-serif;
+  margin: 0;
+  background-color: var(--color-bg-white);
+  color: var(--color-text-primary);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text--brand-green {
+  color: var(--color-brand-green);
+}
+
+.text--brand-blue {
+  color: var(--color-brand-blue);
+}
+
+/* Skip to main content link (accessibility) */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.sr-only:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  z-index: 9999;
+  padding: 10px;
+  background: var(--color-brand-green);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  border-radius: var(--border-radius-small);
+  top: 10px;
+  left: 10px;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--spacing-card);
+  display: grid;
+  gap: var(--spacing-section);
+}

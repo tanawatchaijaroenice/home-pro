@@ -1,905 +1,237 @@
 <!DOCTYPE html>
 <html lang="th">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Economy TH</title>
-    <style>
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-Thin.ttf') format('truetype');
-            font-weight: 100;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-ThinItalic.ttf') format('truetype');
-            font-weight: 100;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-ExtraLight.ttf') format('truetype');
-            font-weight: 200;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-ExtraLightItalic.ttf') format('truetype');
-            font-weight: 200;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-Light.ttf') format('truetype');
-            font-weight: 300;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-LightItalic.ttf') format('truetype');
-            font-weight: 300;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-Italic.ttf') format('truetype');
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-Medium.ttf') format('truetype');
-            font-weight: 500;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-MediumItalic.ttf') format('truetype');
-            font-weight: 500;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-SemiBold.ttf') format('truetype');
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-SemiBoldItalic.ttf') format('truetype');
-            font-weight: 600;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-BoldItalic.ttf') format('truetype');
-            font-weight: 700;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-ExtraBold.ttf') format('truetype');
-            font-weight: 800;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-ExtraBoldItalic.ttf') format('truetype');
-            font-weight: 800;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-Black.ttf') format('truetype');
-            font-weight: 900;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Prompt';
-            src: url('font/Prompt-BlackItalic.ttf') format('truetype');
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        /* --- GENERAL STYLES --- */
-        body {
-            font-family: "Prompt", sans-serif;
-            margin: 0;
-            background-color: #fff;
-            color: #333;
-        }
-
-        /* --- LAYOUT --- */
-        .global-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            gap: 40px;
-        }
-
-        /* --- SECTION 1: HERO --- */
-        .section-1 {
-            position: relative;
-            min-height: 300px;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .section-1::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('./images/Desktop/1-baner.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: 1;
-        }
-
-        .section-1::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-        }
-
-        .section-1-hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 20px 30px;
-        }
-
-        .section-1-hero-title {
-            font-size: 58px;
-            font-weight: 500;
-            line-height: 1;
-            margin: 0;
-            letter-spacing: 1px;
-        }
-
-        .box-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 8px;
-        }
-
-        .info-box {
-            flex: 1;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .box-header-row {
-            margin-bottom: 5px;
-        }
-
-        .box-text {
-            font-size: 24px;
-            font-weight: 400;
-            margin: 0;
-            line-height: 1.4;
-            text-align: center;
-        }
-
-        .large-number {
-            font-size: 60px;
-            font-weight: 500;
-            line-height: 1.2;
-            margin-top: 5px;
-        }
-
-        /* --- SECTION 2: INTRODUCTION --- */
-        .section-2 {
-            position: relative;
-            min-height: 400px;
-            height: auto;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .section-2::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('./images/Desktop/2-Introduction.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: 1;
-        }
-
-        .section-2-hero-content {
-            position: relative;
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-            padding: 70px;
-            gap: 20px;
-        }
-
-        .section-2-title {
-            font-size: 50px;
-            font-weight: 400;
-            line-height: 68px;
-            margin: 0 0 0 0;
-            letter-spacing: 1px;
-        }
-
-        .section-2-content {
-            font-size: 34px;
-            font-weight: 300;
-            line-height: 1.4;
-            margin: 0 0 10px 0;
-            letter-spacing: 1px;
-        }
-
-        /* --- SECTION 3: CIRCULARITY GRID --- */
-        .section-3 {
-            display: grid;
-            grid-template-columns: 0.5fr 1fr 0.5fr;
-        }
-
-        .section-3 .section-3-main-side {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .section-3 .section-3-main-center {
-            justify-content: center;
-            display: grid;
-            align-items: center;
-        }
-
-        .section-3 .section-3-main-center img {
-            width: 555px;
-            height: 565.33px;
-        }
-
-        .section-3 .section-3-box-content {
-            text-align: center;
-        }
-
-        .section-3 .section-3-box-content img {
-            width: 100px;
-        }
-
-        .section-3 .section-3-box-content .text-title {
-            color: #367F47;
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .section-3 .section-3-box-content .text-content {
-            font-size: 18px;
-            margin: 0;
-        }
-
-        /* --- SECTION 4: VIDEO --- */
-        .content-section-3 {
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            height: 99%;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* --- SECTION 5: HALF GRID SECTIONS --- */
-        .section-main-half-grid {
-            display: grid;
-            gap: .5rem;
-        }
-
-        .section-half-grid {
-            position: relative;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            padding: 3rem 5rem;
-            display: flex;
-            min-height: 640px; 
-            gap: 20px;
-        }
-
-        .section-half-grid.bg-repair {
-            background-image: url('/images/Desktop/5-Repair\ Service.jpg');
-            background-size: cover;
-            background-position: center;
-            box-sizing: border-box;
-        }
-
-        .section-half-grid.bg-tradein {
-            background-image: url('/images/Desktop/6-Trade-in.jpg');
-            background-size: cover;
-            background-position: center;
-            box-sizing: border-box;
-        }
-
-        .section-half-grid.bg-waste {
-            background-image: url('/images/Desktop/7-Waste-management.jpg');
-            background-size: cover;
-            background-position: center;
-            box-sizing: border-box;
-        }
-
-        .section-half-grid.bg-circular {
-            background-image: url('/images/Desktop/8-Circular\ products.jpg');
-            background-size: cover;
-            background-position: center;
-            box-sizing: border-box;
-        }
-
-        .half-left-empty {
-            flex: 4;
-            border-radius: 8px;
-        }
-
-        .half-right-content {
-            flex: 3;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            text-align: left;
-            padding: 15px 0;
-            position: relative;
-        }
-
-        .half-right-content .bottom-position {
-            position: absolute;
-            bottom: 1rem;
-            font-size: 18px;
-        }
-
-        .half-right-content p {
-            margin: 0;
-            color: #ffffff;
-        }
-
-        .text-line-1 {
-            line-height: 80px;
-            font-size: 62px;
-            font-weight: 500;
-        }
-
-        .text-line-2 {
-            line-height: 60px;
-            font-size: 42px;
-            color: #333;
-        }
-
-        .text-line-3 {
-            font-size: 30px;
-            font-weight: 300;
-            margin-top: 3rem !important;
-            line-height: 48px !important;
-        }
-
-        /* --- RESPONSIVE ADJUSTMENTS --- */
-
-        /* 1. Tablet Adjustments (<= 1024px) */
-        @media (max-width: 1024px) {
-
-            /* Section 1 */
-            .section-1 {
-                height: 350px;
-            }
-
-            .section-1-hero-title {
-                font-size: 32px;
-            }
-
-            .info-box .box-header-row .box-text {
-                font-size: 15px;
-            }
-
-            .box-container {
-                gap: 10px;
-            }
-
-            .box-text {
-                font-size: 1.1rem;
-            }
-
-            .large-number {
-                font-size: 3rem;
-            }
-
-            /* Section 2 Tablet adjustments */
-            .section-2-title {
-                font-size: 2.5rem;
-                line-height: 1.3
-            }
-
-            .section-2-content {
-                font-size: 1.5rem;
-                /* Reduced for tablet */
-            }
-
-            .section-3 .section-3-main-center img {
-                width: 390px;
-                height: auto;
-            }
-
-            .section-half-grid {
-                padding: 1rem 2rem;
-            }
-
-            /* Section 2, 3, 4 titles */
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .section-half-grid .text-line-1 {
-                font-size: 6vw;
-                line-height: unset !important;
-            }
-
-            .section-half-grid .text-line-2 {
-                font-size: 4vw;
-                line-height: unset !important;
-            }
-
-            .section-half-grid .text-line-3 {
-                font-size: 3vw;
-                line-height: unset !important;
-                margin-top: 0 !important;
-            }
-
-            .half-right-content {
-                word-break: break-word;
-            }
-        }
-
-        /* 2. Mobile Adjustments (<= 768px) */
-        @media (max-width: 768px) {
-            .global-container {
-                padding: 0;
-                gap: 10px;
-            }
-
-            .section-1 {
-                height: auto;
-                padding: 30px 0;
-                border-radius: 0;
-            }
-
-            .section-1::before {
-                background-image: url('./images/Mobile/01-Hp\ Net\ zero.jpg');
-            }
-
-            .section-1-hero-title {
-                font-size: 32px;
-                margin-bottom: 20px;
-            }
-
-            .box-container {
-                flex-direction: column;
-                gap: 15px;
-                padding: 0 10px;
-            }
-
-            .info-box {
-                padding: 0;
-                text-align: left;
-            }
-
-            .info-box .box-header-row {
-                justify-content: center;
-                display: flex;
-                flex-wrap: nowrap;
-                margin-bottom: 5px;
-            }
-
-            .info-box .box-header-row .box-text {
-                display: inline;
-                margin-right: 5px;
-                font-size: 18px;
-            }
-
-
-            .box-text {
-                font-size: 1rem;
-            }
-
-            .large-number {
-                font-size: 42px;
-                line-height: 1.1;
-            }
-
-            .content-section-2 {
-                flex-direction: column-reverse;
-                padding: 30px 15px;
-            }
-
-            .section-2 {
-                min-height: auto;
-                height: auto;
-                padding: 30px 0;
-                border-radius: 0;
-            }
-
-            .section-2::before {
-                background-image: url('./images/Mobile/02-โฮมโปร\ เป็นผู้ค้าปลีก.jpg');
-            }
-
-            .section-2-hero-content {
-                padding: 0 20px;
-            }
-
-            .section-2-title {
-                font-size: 23px;
-            }
-
-            .section-2-content {
-                font-size: 16px;
-                line-height: 30px;
-            }
-
-            .section-3 {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding: 2rem;
-            }
-
-            .column-2 {
-                order: -1;
-            }
-
-            .column-1 {
-                order: 1;
-                gap: 1rem;
-            }
-
-            .column-3 {
-                order: 0;
-                gap: 1rem;
-
-            }
-
-            .section-3-box-content {
-                display: flex;
-            }
-
-            .section-3 .section-3-box-content {
-                text-align: left;
-                gap: 1.5rem;
-                align-items: start;
-            }
-
-            .section-3 .section-3-box-content img {
-                width: 55px;
-            }
-
-            .section-3 .section-3-box-content .text-title {
-                font-size: 18px;
-            }
-
-            .section-3 .section-3-box-content .text-content {
-                font-size: 14px;
-            }
-
-            .video-wrapper {
-                border-radius: 0;
-            }
-
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-
-            .section-half-grid {
-                flex-direction: column;
-                min-height: auto;
-                height: auto;
-                border-radius: 0;
-                height: 390px;
-                box-sizing: border-box;
-                padding: 10px 20px;
-            }
-
-            .half-left-empty {
-                display: none;
-                /* Hide empty column on mobile */
-            }
-
-            .half-right-content {
-                flex: unset;
-                align-items: center;
-                text-align: center;
-                padding: 0;
-                height: 100%;
-            }
-
-            .half-right-content .bottom-position {
-                position: absolute;
-                font-size: 10px;
-                text-align: left;
-                width: 70%;
-                left: 0;
-                bottom: 0;
-            }
-
-            .section-half-grid .text-line-1 {
-                font-size: 28px;
-            }
-
-            .section-half-grid .text-line-2 {
-                font-size: 18px;
-            }
-
-            .section-half-grid .text-line-3 {
-                font-size: 14px;
-                margin-top: 0 !important;
-            }
-
-            .section-3 .section-3-main-center img {
-                width: 100%;
-                height: auto;
-            }
-
-            .section-half-grid.bg-repair {
-                background-image: url('/images/Mobile/05-repair service.jpg');
-                background-size: cover;
-                background-position: center;
-                box-sizing: border-box;
-            }
-
-            .section-half-grid.bg-tradein {
-                background-image: url('/images/Mobile/06-trade-in.jpg');
-                background-size: cover;
-                background-position: center;
-                box-sizing: border-box;
-            }
-
-            .section-half-grid.bg-waste {
-                background-image: url('/images/Mobile/07-waste\ management.jpg');
-                background-size: cover;
-                background-position: center;
-                box-sizing: border-box;
-            }
-
-            .section-half-grid.bg-circular {
-                background-image: url('/images/Mobile/08-circular\ products.jpg');
-                background-size: cover;
-                background-position: center;
-                box-sizing: border-box;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="global-container">
-
-        <section class="section-1">
-            <div class="section-1-hero-content">
-                <p class="section-1-hero-title">
-                    HOMEPRO NET ZERO REAL-TIME
-                </p>
-
-                <div class="box-container">
-                    <div class="info-box">
-                        <div class="box-header-row">
-                            <p class="box-text">น้ำหนักที่จัดการอย่างถูกวิธี</p>
-                            <p class="box-text">(kg.)</p>
-                        </div>
-                        <p class="box-text large-number">
-                            300,000</p>
-                    </div>
-                    <div class="info-box">
-                        <div class="box-header-row">
-                            <p class="box-text">ลด Carbon Emission</p>
-                            <p class="box-text">(kgCO2eq)</p>
-                        </div>
-                        <p class="box-text large-number">
-                            300,000</p>
-                    </div>
-                    <div class="info-box">
-                        <div class="box-header-row">
-                            <p class="box-text">เทียบเท่าการปลูปต้นไม้</p>
-                            <p class="box-text">(ต้น)</p>
-                        </div>
-                        <p class="box-text large-number">
-                            300,000</p>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePro Net Zero - เศรษฐกิจหมุนเวียน | Circular Economy</title>
+    <meta
+      name="description"
+      content="โฮมโปรนำหลักเศรษฐกิจหมุนเวียน (Circular Economy) มาปรับใช้ในธุรกิจ ภายใต้โครงการ Closed-Loop Circularity เพื่อลดผลกระทบต่อสิ่งแวดล้อมและขับเคลื่อนธุรกิจอย่างยั่งยืน"
+    />
+    <meta
+      name="keywords"
+      content="โฮมโปร, เศรษฐกิจหมุนเวียน, circular economy, net zero, ความยั่งยืน, รีไซเคิล, แลกเก่าเพื่อโลกใหม่, สินค้ารักษ์โลก"
+    />
+    <meta name="author" content="HomePro" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HomePro Net Zero - เศรษฐกิจหมุนเวียน" />
+    <meta
+      property="og:description"
+      content="โฮมโปรนำหลักเศรษฐกิจหมุนเวียน (Circular Economy) มาปรับใช้ในธุรกิจ เพื่อลดผลกระทบต่อสิ่งแวดล้อม"
+    />
+    <meta property="og:image" content="/images/Desktop/01-Hp Net zero.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HomePro Net Zero - เศรษฐกิจหมุนเวียน" />
+    <meta
+      name="twitter:description"
+      content="โฮมโปรนำหลักเศรษฐกิจหมุนเวียน (Circular Economy) มาปรับใช้ในธุรกิจ เพื่อลดผลกระทบต่อสิ่งแวดล้อม"
+    />
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="sr-only">ข้ามไปยังเนื้อหาหลัก</a>
+
+    <main class="container">
+      <section
+        class="hero-banner hero-banner--circular"
+        aria-label="แบนเนอร์หลัก"
+      >
+        <div class="hero-banner__content">
+          <h1 class="hero-banner__title">HOMEPRO NET ZERO REAL-TIME</h1>
+
+          <div class="stats-container">
+            <div class="stats-card">
+              <div class="stats-card__header">
+                <p class="stats-card__label">น้ำหนักที่จัดการอย่างถูกวิธี</p>
+                <p class="stats-card__label">(kg.)</p>
+              </div>
+              <p class="stats-card__label stats-card__value">300,000</p>
             </div>
-        </section>
-
-        <section class="section-2">
-            <div class="section-2-hero-content">
-                <h2 class="section-2-title">
-                    โฮมโปร เป็นผู้ค้าปลีกรายแรกของไทย ที่นำหลักเศรษฐกิจหมุนเวียน (Circular Economy)
-                </h2>
-
-                <h3 class="section-2-content">
-                    มาปรับใช้ในธุรกิจ ภายใต้โครงการ Closed-Loop Circularity เพื่อลดผลกระทบต่อสิ่งแวดล้อม พร้อม
-                    ขับเคลื่อนธุรกิจอย่างยั่งยืนเน้นใช้ทรัพยากรอย่างคุ้มค่า ลดขยะ
-                    และลดการใช้ทรัพยากรใหม่อย่างมีประสิทธิภาพ โดยเปิดรับคืนของเก่าที่ไม่ใช้แล้วจากบ้านลูกค้าโฮมโปร
-                    และช่วยนำมาจัดการอย่างถูกวิธี รีไซเคิล ภายใต้ โครงการ “แลกเก่าเพื่อโลกใหม่” พร้อมผลิตเป็นสินค้าใหม่
-                    ที่มีคุณภาพกลับมาจำหน่ายเป็น “สินค้ารักษ์โลก” (Circular Products) เพื่อลดผลกระทบต่อสิ่งแวดล้อม
-                    และขับเคลื่อนองค์กรสู่ความยั่งยืน
-                </h3>
+            <div class="stats-card">
+              <div class="stats-card__header">
+                <p class="stats-card__label">ลด Carbon Emission</p>
+                <p class="stats-card__label">(kgCO2eq)</p>
+              </div>
+              <p class="stats-card__label stats-card__value">300,000</p>
             </div>
-        </section>
-
-        <section class="section-3">
-            <div class="section-3-main-side column-1">
-                <div class="section-3-box-content">
-                    <img src="/images/Desktop/circle_icon01.svg" alt="รูปภาพ 1">
-                    <div>
-                        <p class="text-title">สินค้ารักษ์โลก</p>
-                        <p class="text-content">ผลิตจากวัสดุที่ผ่านการใช้งานนำกลับ จากบ้านลูกค้าโฮมโปร
-                            ผ่านกระบวนการรีไซเคิล
-                            เป็น PCR
-                            (Post-Consumer Recycled) และหมุนเวียนผลิตเป็นสินค้าใหม่</p>
-                    </div>
-                </div>
-                <div class="section-3-box-content">
-                    <img src="/images/Desktop/circle_icon03.svg" alt="รูปภาพ 2">
-                    <div>
-                        <p class="text-title">จัดการขยะอย่างถูกวิธี</p>
-                        <p class="text-content">นำของเก่าจากลูกค้าโฮมโปรมาคัดแยกชิ้นส่วน รีไซเคิลเป็นของใหม่
-                            ช่วยลดของเสีย
-                            และใช้ทรัพยากรให้เกิดประโยชน์สูงสุด</p>
-                    </div>
-                </div>
+            <div class="stats-card">
+              <div class="stats-card__header">
+                <p class="stats-card__label">เทียบเท่าการปลูปต้นไม้</p>
+                <p class="stats-card__label">(ต้น)</p>
+              </div>
+              <p class="stats-card__label stats-card__value">300,000</p>
             </div>
-            <div class="section-3-main-center column-2">
-                <img src="/images/Desktop/cycle_shadow.svg" alt="รูปภาพกลาง">
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-section">
+        <div class="intro-section__content">
+          <h2 class="intro-section__title">
+            โฮมโปร เป็นผู้ค้าปลีกรายแรกของไทย ที่นำหลักเศรษฐกิจหมุนเวียน
+            (Circular Economy)
+          </h2>
+
+          <h3 class="intro-section__description">
+            มาปรับใช้ในธุรกิจ ภายใต้โครงการ Closed-Loop Circularity
+            เพื่อลดผลกระทบต่อสิ่งแวดล้อม พร้อม
+            ขับเคลื่อนธุรกิจอย่างยั่งยืนเน้นใช้ทรัพยากรอย่างคุ้มค่า ลดขยะ
+            และลดการใช้ทรัพยากรใหม่อย่างมีประสิทธิภาพ
+            โดยเปิดรับคืนของเก่าที่ไม่ใช้แล้วจากบ้านลูกค้าโฮมโปร
+            และช่วยนำมาจัดการอย่างถูกวิธี รีไซเคิล ภายใต้ โครงการ
+            "แลกเก่าเพื่อโลกใหม่" พร้อมผลิตเป็นสินค้าใหม่
+            ที่มีคุณภาพกลับมาจำหน่ายเป็น "สินค้ารักษ์โลก" (Circular Products)
+            เพื่อลดผลกระทบต่อสิ่งแวดล้อม และขับเคลื่อนองค์กรสู่ความยั่งยืน
+          </h3>
+        </div>
+      </section>
+
+      <section class="circularity-grid" aria-label="กระบวนการเศรษฐกิจหมุนเวียน">
+        <div class="circularity-grid__side circularity-grid__side--1">
+          <div class="circularity-item">
+            <img
+              src="/images/Desktop/circle_icon01.svg"
+              alt="ไอคอนสินค้ารักษ์โลก"
+            />
+            <div>
+              <p class="circularity-item__title">สินค้ารักษ์โลก</p>
+              <p class="circularity-item__description">
+                ผลิตจากวัสดุที่ผ่านการใช้งานนำกลับ จากบ้านลูกค้าโฮมโปร
+                ผ่านกระบวนการรีไซเคิล เป็น PCR (Post-Consumer Recycled)
+                และหมุนเวียนผลิตเป็นสินค้าใหม่
+              </p>
             </div>
-            <div class="section-3-main-side column-3">
-                <div class="section-3-box-content">
-                    <img src="/images/Desktop/circle_icon02.svg" alt="รูปภาพ 3">
-                    <div>
-                        <p class="text-title">ศูนย์ซ่อมมืออาชีพ</p>
-                        <p class="text-content">
-                            รับซ่อมโดยช่างโฮมโปร (Repair Service Center)
-                            ช่วยยืดอายุการใช้งานสินค้าได้ยาวนานขึ้น
-                            ลดขยะอิเล็กทรอนิกส์ที่ส่งผลต่อโลกร้อน
-                        </p>
-                    </div>
-                </div>
-                <div class="section-3-box-content">
-                    <img src="/images/Desktop/circle_icon04.svg" alt="รูปภาพ 4">
-                    <div>
-                        <p class="text-title">โครงการแลกเก่าเพื่อโลกใหม่</p>
-                        <p class="text-content">ชวนลูกค้าโฮมโปรรักษ์โลก นำของเก่ามาจัดการอย่างถูกวิธี
-                            และเป็นมิตรต่อสิ่งแวดล้อม
-                            ได้สินค้าใหม่คุณภาพ และคุ้มค่าด้วยส่วนลดค่าแลกเครื่องเก่า</p>
-                    </div>
-                </div>
+          </div>
+          <div class="circularity-item">
+            <img src="/images/Desktop/circle_icon03.svg" alt="ไอคอนจัดการขยะ" />
+            <div>
+              <p class="circularity-item__title">จัดการขยะอย่างถูกวิธี</p>
+              <p class="circularity-item__description">
+                นำของเก่าจากลูกค้าโฮมโปรมาคัดแยกชิ้นส่วน รีไซเคิลเป็นของใหม่
+                ช่วยลดของเสีย และใช้ทรัพยากรให้เกิดประโยชน์สูงสุด
+              </p>
             </div>
-        </section>
-
-        <section class="content-section-3">
-            <div class="video-wrapper">
-                <video controls poster="images/Desktop/04-vdo.jpg">
-                    <source src="/video/Revise Loop 1.mp4" type="video/mp4">
-                </video>
+          </div>
+        </div>
+        <div class="circularity-grid__center">
+          <img
+            src="/images/Desktop/cycle_shadow.svg"
+            alt="วงจรเศรษฐกิจหมุนเวียน"
+          />
+        </div>
+        <div class="circularity-grid__side circularity-grid__side--2">
+          <div class="circularity-item">
+            <img src="/images/Desktop/circle_icon02.svg" alt="ไอคอนศูนย์ซ่อม" />
+            <div>
+              <p class="circularity-item__title">ศูนย์ซ่อมมืออาชีพ</p>
+              <p class="circularity-item__description">
+                รับซ่อมโดยช่างโฮมโปร (Repair Service Center)
+                ช่วยยืดอายุการใช้งานสินค้าได้ยาวนานขึ้น
+                ลดขยะอิเล็กทรอนิกส์ที่ส่งผลต่อโลกร้อน
+              </p>
             </div>
-        </section>
-
-        <section class="section-main-half-grid">
-            <div class="section-half-grid bg-repair">
-                <div class="half-left-empty">
-                </div>
-                <div class="half-right-content">
-                    <p class="text-line-1">Repair Service Center</p>
-                    <p class="text-line-2">บริการศูนย์ช่างมืออาชีพ ทั่วประเทศ</p>
-                    <p class="text-line-3">ด้วยทีมช่างโฮมโปร มือโปรประจำบ้านคุณ
-                        ผู้เชี่ยวชาญที่ช่วยยืดอายุการใช้งานสินค้า
-                        ได้ยาวนานขึ้นดีต่อเรา ดีต่อโลก</p>
-                </div>
+          </div>
+          <div class="circularity-item">
+            <img
+              src="/images/Desktop/circle_icon04.svg"
+              alt="ไอคอนแลกเก่าเพื่อโลกใหม่"
+            />
+            <div>
+              <p class="circularity-item__title">โครงการแลกเก่าเพื่อโลกใหม่</p>
+              <p class="circularity-item__description">
+                ชวนลูกค้าโฮมโปรรักษ์โลก นำของเก่ามาจัดการอย่างถูกวิธี
+                และเป็นมิตรต่อสิ่งแวดล้อม ได้สินค้าใหม่คุณภาพ
+                และคุ้มค่าด้วยส่วนลดค่าแลกเครื่องเก่า
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="section-half-grid bg-tradein">
-                <div class="half-left-empty">
-                </div>
-                <div class="half-right-content">
-                    <p class="text-line-1">Trade-In</p>
-                    <p class="text-line-2">โครงการ “แลกเก่าเพื่อโลกใหม่”</p>
-                    <p class="text-line-3">นำของเก่ามาแลกรับส่วนลด เมื่อซื้อสินค้าใหม่ พร้อมฟรีค่าติดตั้ง รื้อถอน*
-                        และได้จัดการของเก่าอย่างถูกวิธี
-                    </p>
-                    <p class="bottom-position">*ภายใต้เงื่อนไขที่บริษัทกำหนด / โปรดตรวจสอบรายละเอียดเพิ่มเติม ณ จุดขาย /
-                        เฉพาะสินค้าที่ร่วมรายการ</p>
-                </div>
+      <section class="video-section" aria-label="วิดีโอแสดงกระบวนการ">
+        <div class="video-section__wrapper">
+          <video
+            controls
+            poster="images/Desktop/04-vdo.jpg"
+            aria-label="วิดีโอโครงการ Closed-Loop Circularity"
+          >
+            <source src="/video/Revise Loop 1.mp4" type="video/mp4" />
+            <track kind="captions" label="Thai" />
+          </video>
+        </div>
+      </section>
 
-            </div>
+      <section class="service-cards">
+        <div class="service-card service-card--repair">
+          <div class="service-card__image"></div>
+          <div class="service-card__content">
+            <p class="service-card__title">Repair Service Center</p>
+            <p class="service-card__subtitle">
+              บริการศูนย์ช่างมืออาชีพ ทั่วประเทศ
+            </p>
+            <p class="service-card__description">
+              ด้วยทีมช่างโฮมโปร มือโปรประจำบ้านคุณ
+              ผู้เชี่ยวชาญที่ช่วยยืดอายุการใช้งานสินค้า ได้ยาวนานขึ้นดีต่อเรา
+              ดีต่อโลก
+            </p>
+          </div>
+        </div>
 
-            <a href="/Waste_Management_TH.html" style="text-decoration: none;">
-                <div class="section-half-grid bg-waste">
-                    <div class="half-left-empty"> </div>
-                    <div class="half-right-content">
-                        <p class="text-line-1">Waste Management</p>
-                        <p class="text-line-2">สินค้าเก่าเราจัดการ อย่างถูกวิธี</p>
-                        <p class="text-line-3">รักษ์โลกอย่างมั่นใจ ด้วยการจัดการ อย่างถูกวิธีและการผลิตที่ตรวจสอบได้</p>
-                    </div>
-                </div>
-            </a>
+        <div class="service-card service-card--tradein">
+          <div class="service-card__image"></div>
+          <div class="service-card__content">
+            <p class="service-card__title">Trade-In</p>
+            <p class="service-card__subtitle">โครงการ "แลกเก่าเพื่อโลกใหม่"</p>
+            <p class="service-card__description">
+              นำของเก่ามาแลกรับส่วนลด เมื่อซื้อสินค้าใหม่ พร้อมฟรีค่าติดตั้ง
+              รื้อถอน* และได้จัดการของเก่าอย่างถูกวิธี
+            </p>
+            <p class="service-card__footer">
+              *ภายใต้เงื่อนไขที่บริษัทกำหนด / โปรดตรวจสอบรายละเอียดเพิ่มเติม ณ
+              จุดขาย / เฉพาะสินค้าที่ร่วมรายการ
+            </p>
+          </div>
+        </div>
 
-            <div class="section-half-grid bg-circular">
-                <div class="half-left-empty">
-                </div>
-                <div class="half-right-content">
-                    <p class="text-line-1">Circular Products</p>
-                    <p class="text-line-2">สินค้ารักษ์โลก จากวัสดุหมุนเวียน</p>
-                    <p class="text-line-3">ร่วมเป็นส่วนหนึ่งสร้างโลกที่ยั่งยืน ด้วยผลิตภัณฑ์ที่เป็นมิตรต่อสิ่งแวดล้อม
-                        ซึ่งผลิตจากวัสดุรีไซเคิล PCR ที่เก็บจากบ้านคุณ</p>
-                </div>
-            </div>
-        </section>
+        <a
+          href="/Waste_Management_TH.html"
+          class="service-card service-card--waste"
+        >
+          <div class="service-card__image"></div>
+          <div class="service-card__content">
+            <p class="service-card__title">Waste Management</p>
+            <p class="service-card__subtitle">
+              สินค้าเก่าเราจัดการ อย่างถูกวิธี
+            </p>
+            <p class="service-card__description">
+              รักษ์โลกอย่างมั่นใจ ด้วยการจัดการ
+              อย่างถูกวิธีและการผลิตที่ตรวจสอบได้
+            </p>
+          </div>
+        </a>
 
-    </div>
-</body>
-
+        <div class="service-card service-card--circular-products">
+          <div class="service-card__image"></div>
+          <div class="service-card__content">
+            <p class="service-card__title">Circular Products</p>
+            <p class="service-card__subtitle">
+              สินค้ารักษ์โลก จากวัสดุหมุนเวียน
+            </p>
+            <p class="service-card__description">
+              ร่วมเป็นส่วนหนึ่งสร้างโลกที่ยั่งยืน
+              ด้วยผลิตภัณฑ์ที่เป็นมิตรต่อสิ่งแวดล้อม ซึ่งผลิตจากวัสดุรีไซเคิล
+              PCR ที่เก็บจากบ้านคุณ
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

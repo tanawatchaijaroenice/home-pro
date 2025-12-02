@@ -1,0 +1,584 @@
+/* ============================================
+   WASTE MANAGEMENT PAGE (Waste_Management_TH.html)
+   ============================================ */
+
+/* Hero Banner - Waste Management */
+.hero-banner--waste::before {
+  background-image: url("../../images/Desktop/1-baner.jpg");
+}
+
+/* Iframe Embed */
+.iframe-embed iframe {
+  height: 520px;
+}
+
+/* Circular Products Banner */
+.circular-banner {
+  position: relative;
+  height: var(--section-height-standard);
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  color: var(--color-text-inverse);
+}
+
+.circular-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/Desktop/03.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.circular-banner__title {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 0;
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+/* Mission Section */
+.mission-section {
+  background-color: var(--color-bg-white);
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  min-height: 350px;
+  height: var(--section-height-standard);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/Desktop/05.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.mission-section__empty {
+  flex: 1;
+}
+
+.mission-section__image {
+  flex: 1;
+  border-top-left-radius: var(--border-radius-base);
+  border-bottom-left-radius: var(--border-radius-base);
+  background-image: url("https://assets.ch3plus.com/newsch/2024/01/786150608681.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.mission-section__content {
+  flex: 1;
+  border-top-right-radius: var(--border-radius-base);
+  border-bottom-right-radius: var(--border-radius-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0 5.5rem;
+  z-index: 5;
+  background-image: url("../../images/Mobile/05.1-โฮมโปรพร้อมยืนหยัด.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.mission-section__content h2 {
+  font-size: 90px;
+  color: var(--color-text-inverse);
+  font-weight: 500;
+}
+
+.mission-section__content h3 {
+  font-size: 48px;
+  font-weight: 400;
+  padding: 0 3rem;
+  color: var(--color-text-inverse);
+  line-height: 58px;
+}
+
+/* Mobile-Only Sections */
+.mobile-only {
+  display: none;
+}
+
+.mobile-only--blue {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  background: var(--color-brand-blue);
+  color: var(--color-text-inverse);
+  gap: 2rem;
+  height: 50vh;
+  padding: 0 48px;
+}
+
+.mobile-only--blue img {
+  width: 100%;
+  max-width: 13rem;
+}
+
+.mobile-only__box {
+  display: grid;
+  gap: var(--spacing-base);
+}
+
+.mobile-only__box h2 {
+  font-size: 54px;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.mobile-only__box h3 {
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Waste Info */
+.waste-info {
+  position: relative;
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  gap: var(--spacing-card);
+}
+
+.waste-info__list {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.waste-info h2 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.waste-info h3 {
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Waste Sources */
+.waste-sources {
+  height: var(--section-height-standard);
+}
+
+.waste-sources__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+
+.waste-sources__item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.waste-sources__item--customer {
+  background-image: url("../../images/Desktop/0131.jpg");
+}
+
+.waste-sources__item--operation {
+  background-image: url("../../images/Desktop/0046.jpg");
+}
+
+.waste-sources__item--tradein {
+  background-image: url("../../images/Desktop/0020\ copy.jpg");
+}
+
+.waste-sources__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(54, 127, 71, 1) 0%,
+    transparent 25%
+  );
+  z-index: 1;
+}
+
+.waste-sources__text {
+  padding: 30px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--color-text-inverse);
+  position: relative;
+  z-index: 2;
+}
+
+/* Waste Solutions */
+.waste-solutions h2 {
+  font-size: 72px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: var(--spacing-base);
+}
+
+.waste-solutions__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, var(--section-height-standard));
+}
+
+.solution-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 8px 40px 70px 40px;
+  line-height: 1.2;
+}
+
+.solution-card--image {
+  padding: 0 0 30px 0;
+}
+
+.solution-card--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.solution-card h2 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.solution-card__content {
+  display: grid;
+  gap: var(--spacing-card);
+}
+
+.solution-card__content p {
+  font-size: 30px;
+}
+
+/* Partner Logos */
+.partner-logos {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  max-height: 120px;
+  min-height: 120px;
+}
+
+.partner-logos img {
+  width: 100%;
+  min-width: 9rem;
+  object-fit: contain;
+}
+
+/* Service Card Variants - Waste Management Bottom Banners */
+.service-card--circular-products-bottom {
+  background-image: url("../../images/Desktop/15.jpg");
+  min-height: 400px;
+}
+
+.service-card--tradein-bottom {
+  background-image: url("../../images/Desktop/16.jpg");
+  min-height: 400px;
+}
+
+.service-card--repair-bottom {
+  background-image: url("../../images/Desktop/17.jpg");
+  min-height: 400px;
+}
+
+.service-cards--bottom .service-card .service-card__image {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.service-cards--bottom .service-card .service-card__image img {
+  max-width: 95%;
+}
+
+.service-cards--bottom .service-card .service-card__content {
+  flex: 1;
+  flex-basis: 10%;
+  border-top-right-radius: var(--border-radius-base);
+  border-bottom-right-radius: var(--border-radius-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0;
+  line-height: 1;
+  gap: var(--spacing-base);
+}
+
+.service-cards--bottom .service-card .service-card__content h3 {
+  padding: 0;
+  font-size: 72px;
+  color: var(--color-text-inverse);
+  font-weight: 500;
+}
+
+.service-cards--bottom .service-card .service-card__content p {
+  font-size: 36px;
+  color: var(--color-text-inverse);
+  font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE: TABLET (<= 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .mission-section__content h2 {
+    font-size: 80px;
+  }
+
+  .mission-section__content h3 {
+    font-size: 38px;
+    font-weight: 300;
+    padding: 0 10px;
+  }
+
+  .partner-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    max-height: unset;
+    min-height: unset;
+    padding: var(--spacing-base);
+  }
+}
+
+/* ============================================
+   RESPONSIVE: MOBILE (<= 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .waste-info {
+    padding: var(--spacing-base);
+    gap: 12px;
+  }
+
+  .waste-info__list {
+    font-size: 18px;
+  }
+
+  .waste-info h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .waste-info h3 {
+    font-size: 21px;
+  }
+
+  .mission-section {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .mobile-only--blue {
+    display: flex;
+  }
+
+  .waste-solutions h2 {
+    font-size: 32px;
+  }
+
+  .waste-solutions__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .waste-solutions__grid .solution-card:nth-child(3) {
+    grid-row: 4;
+  }
+
+  .waste-solutions__grid .solution-card:nth-child(4) {
+    grid-row: 3;
+  }
+
+  .waste-solutions__grid .solution-card:nth-child(7) {
+    grid-row: 8;
+  }
+
+  .waste-solutions__grid .solution-card:nth-child(8) {
+    grid-row: 7;
+  }
+
+  .solution-card {
+    gap: 8px;
+    align-items: center;
+    padding: var(--spacing-card) 30px;
+    text-align: center;
+  }
+
+  .solution-card--image {
+    padding-bottom: 0;
+    min-height: 300px;
+  }
+
+  .solution-card h2 {
+    font-size: 28px;
+  }
+
+  .solution-card__content p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .partner-logos img {
+    width: auto;
+    max-width: 25vw;
+    max-height: 150px;
+    object-fit: contain;
+    min-width: unset;
+  }
+
+  .partner-logos {
+    gap: 0;
+    padding: var(--spacing-base) 2.5rem;
+  }
+
+  .waste-sources {
+    height: 255.94px;
+  }
+
+  .waste-sources__text {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .circular-banner {
+    height: 280.31px;
+    border-radius: 0;
+  }
+
+  .circular-banner::before {
+    background-image: url("../../images/Mobile/03-Circular product.jpg");
+  }
+
+  .circular-banner__title {
+    font-size: 28px;
+    padding: var(--spacing-card) 0;
+  }
+
+  .service-card--circular-products-bottom {
+    background-image: url("../../images/Mobile/15-H circular.jpg");
+    min-height: 15rem;
+  }
+
+  .service-card--tradein-bottom {
+    background-image: url("../../images/Mobile/16-H trade in.jpg");
+    min-height: 15rem;
+  }
+
+  .service-card--repair-bottom {
+    background-image: url("../../images/Mobile/17-H repair.jpg");
+    min-height: 15rem;
+  }
+
+  .service-cards--bottom .service-card .service-card__image {
+    flex: 6;
+  }
+
+  .service-cards--bottom .service-card .service-card__content {
+    flex: 4;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .service-cards--bottom .service-card .service-card__content h3 {
+    font-size: 28px;
+    text-align: left;
+    line-height: 34px;
+  }
+
+  .service-cards--bottom .service-card .service-card__content p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
+/* Iframe Responsive Adjustments */
+@media (max-width: 808px) {
+  .iframe-embed iframe {
+    height: 121rem !important;
+  }
+}
+
+@media (max-width: 660px) {
+  .iframe-embed iframe {
+    height: 110rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .iframe-embed iframe {
+    height: 104rem !important;
+  }
+}
+
+@media (max-width: 554px) {
+  .iframe-embed iframe {
+    height: 99rem !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .iframe-embed iframe {
+    height: 94rem !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .iframe-embed iframe {
+    height: 90rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .iframe-embed iframe {
+    height: 86rem !important;
+  }
+}
