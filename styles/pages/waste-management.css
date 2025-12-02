@@ -448,7 +448,7 @@
   .solution-card {
     gap: 8px;
     align-items: center;
-    padding: var(--spacing-card) 30px;
+    padding: var(--spacing-card) 0;
     text-align: center;
   }
 
