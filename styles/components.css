@@ -249,9 +249,9 @@
   animation: auto-slide-4 20s infinite ease-in-out;
 }
 
-.carousel__container:hover .carousel__track {
+/* .carousel__container:hover .carousel__track {
   animation-play-state: paused;
-}
+} */
 
 .carousel__slide,
 .carousel__item {
@@ -294,75 +294,28 @@
   transition: background-color var(--transition-base);
 }
 
-/* 3-slide carousel dots animation */
-.carousel__track:has(.carousel__item:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1),
-.carousel__track:has(.carousel__slide:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1) {
-  animation: dot-active-3-1 15s infinite ease-in-out;
+/* Carousel dots animation - simplified approach */
+/* Apply animations directly to each dot */
+.carousel__dot:nth-child(1) {
+  animation: dot-active-1 15s infinite ease-in-out;
 }
 
-.carousel__track:has(.carousel__item:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2),
-.carousel__track:has(.carousel__slide:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2) {
-  animation: dot-active-3-2 15s infinite ease-in-out;
+.carousel__dot:nth-child(2) {
+  animation: dot-active-2 15s infinite ease-in-out;
 }
 
-.carousel__track:has(.carousel__item:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3),
-.carousel__track:has(.carousel__slide:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3) {
-  animation: dot-active-3-3 15s infinite ease-in-out;
+.carousel__dot:nth-child(3) {
+  animation: dot-active-3 15s infinite ease-in-out;
 }
 
-/* 4-slide carousel dots animation */
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1) {
-  animation: dot-active-4-1 20s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2) {
-  animation: dot-active-4-2 20s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3) {
-  animation: dot-active-4-3 20s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(4),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(4) {
-  animation: dot-active-4-4 20s infinite ease-in-out;
+.carousel__dot:nth-child(4) {
+  animation: dot-active-4 20s infinite ease-in-out;
 }
 
 /* Pause dot animations on hover */
-.carousel__container:hover .carousel__dot {
+/* .carousel__container:hover .carousel__dot {
   animation-play-state: paused;
-}
+} */
 
 /* Keyframe Animations */
 @keyframes auto-slide {
@@ -405,11 +358,11 @@
   }
 }
 
-/* Dot animation for 3-slide carousel */
-@keyframes dot-active-3-1 {
+/* Simplified dot animations - works for both 3 and 4 item carousels */
+@keyframes dot-active-1 {
   0%,
   28% {
-    background-color: #666666;
+    background-color: #666;
   }
   33%,
   100% {
@@ -417,14 +370,14 @@
   }
 }
 
-@keyframes dot-active-3-2 {
+@keyframes dot-active-2 {
   0%,
   28% {
     background-color: rgba(255, 255, 255, 0.5);
   }
   33%,
   61% {
-    background-color: #666666;
+    background-color: #666;
   }
   66%,
   100% {
@@ -432,67 +385,25 @@
   }
 }
 
-@keyframes dot-active-3-3 {
+@keyframes dot-active-3 {
   0%,
   61% {
     background-color: rgba(255, 255, 255, 0.5);
   }
   66%,
   100% {
-    background-color: #666666;
+    background-color: #666;
   }
 }
 
-/* Dot animation for 4-slide carousel */
-@keyframes dot-active-4-1 {
-  0%,
-  22% {
-    background-color: #666666;
-  }
-  25%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-}
-
-@keyframes dot-active-4-2 {
-  0%,
-  22% {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  25%,
-  47% {
-    background-color: #666666;
-  }
-  50%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-}
-
-@keyframes dot-active-4-3 {
-  0%,
-  47% {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  50%,
-  72% {
-    background-color: #666666;
-  }
-  75%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-}
-
-@keyframes dot-active-4-4 {
+@keyframes dot-active-4 {
   0%,
   72% {
     background-color: rgba(255, 255, 255, 0.5);
   }
   75%,
   100% {
-    background-color: #666666;
+    background-color: #666;
   }
 }
 
