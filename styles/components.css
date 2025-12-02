@@ -280,15 +280,17 @@
   display: flex;
   gap: 10px;
   z-index: 10;
+  align-items: center;
 }
 
 .carousel__dot {
-  height: 10px;
-  width: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  height: 6px;
+  width: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: default;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: background-color var(--transition-base);
 }
 
@@ -407,37 +409,37 @@
 @keyframes dot-active-3-1 {
   0%,
   28% {
-    background-color: #888888;
+    background-color: #666666;
   }
   33%,
   100% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
 @keyframes dot-active-3-2 {
   0%,
   28% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   33%,
   61% {
-    background-color: #888888;
+    background-color: #666666;
   }
   66%,
   100% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
 @keyframes dot-active-3-3 {
   0%,
   61% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   66%,
   100% {
-    background-color: #888888;
+    background-color: #666666;
   }
 }
 
@@ -445,52 +447,52 @@
 @keyframes dot-active-4-1 {
   0%,
   22% {
-    background-color: #888888;
+    background-color: #666666;
   }
   25%,
   100% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
 @keyframes dot-active-4-2 {
   0%,
   22% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   25%,
   47% {
-    background-color: #888888;
+    background-color: #666666;
   }
   50%,
   100% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
 @keyframes dot-active-4-3 {
   0%,
   47% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   50%,
   72% {
-    background-color: #888888;
+    background-color: #666666;
   }
   75%,
   100% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
 @keyframes dot-active-4-4 {
   0%,
   72% {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   75%,
   100% {
-    background-color: #888888;
+    background-color: #666666;
   }
 }
 
