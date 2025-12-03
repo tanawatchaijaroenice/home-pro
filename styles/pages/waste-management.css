@@ -448,7 +448,7 @@
   .solution-card {
     gap: 8px;
     align-items: center;
-    padding: var(--spacing-card) 30px;
+    padding: var(--spacing-card) 0;
     text-align: center;
   }
 
@@ -502,23 +502,22 @@
     padding: var(--spacing-card) 0;
   }
 
-  .service-card {
-    height: auto;
-  }
-
   .service-card--circular-products-bottom {
     background-image: url("../../images/Mobile/15-H circular.jpg");
     min-height: 15rem;
+    height: auto;
   }
 
   .service-card--tradein-bottom {
     background-image: url("../../images/Mobile/16-H trade in.jpg");
     min-height: 15rem;
+    height: auto;
   }
 
   .service-card--repair-bottom {
     background-image: url("../../images/Mobile/17-H repair.jpg");
     min-height: 15rem;
+    height: auto;
   }
 
   .service-cards--bottom .service-card .service-card__image {

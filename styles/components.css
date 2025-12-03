@@ -209,10 +209,20 @@
   box-shadow: var(--shadow-elevated);
 }
 
+.btn-outline:hover a {
+  color: var(--color-text-inverse);
+}
+
 .btn-outline:focus {
   outline: 3px solid var(--color-brand-green);
   outline-offset: 2px;
 }
+
+.btn-outline a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
 
 /* Mobile-Only Sections */
 .mobile-only {
@@ -280,81 +290,18 @@
   display: flex;
   gap: 10px;
   z-index: 10;
+  align-items: center;
 }
 
 .carousel__dot {
-  height: 10px;
-  width: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  height: 6px;
+  width: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: default;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: background-color var(--transition-base);
-}
-
-/* 3-slide carousel dots animation */
-.carousel__track:has(.carousel__item:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1),
-.carousel__track:has(.carousel__slide:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1) {
-  animation: dot-active-3-1 15s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2),
-.carousel__track:has(.carousel__slide:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2) {
-  animation: dot-active-3-2 15s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3),
-.carousel__track:has(.carousel__slide:nth-child(3))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3) {
-  animation: dot-active-3-3 15s infinite ease-in-out;
-}
-
-/* 4-slide carousel dots animation */
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(1) {
-  animation: dot-active-4-1 20s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(2) {
-  animation: dot-active-4-2 20s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(3) {
-  animation: dot-active-4-3 20s infinite ease-in-out;
-}
-
-.carousel__track:has(.carousel__item:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(4),
-.carousel__track:has(.carousel__slide:nth-child(4))
-  ~ .carousel__dots
-  .carousel__dot:nth-child(4) {
-  animation: dot-active-4-4 20s infinite ease-in-out;
 }
 
 /* Pause dot animations on hover */
@@ -364,133 +311,51 @@
 
 /* Keyframe Animations */
 @keyframes auto-slide {
+
   0%,
   28% {
     transform: translateX(0%);
   }
+
   33%,
   61% {
     transform: translateX(-33.3333%);
   }
+
   66%,
   94% {
     transform: translateX(-66.6666%);
   }
+
   100% {
     transform: translateX(-66.6666%);
   }
 }
 
 @keyframes auto-slide-4 {
+
   0%,
   22% {
     transform: translateX(0%);
   }
+
   25%,
   47% {
     transform: translateX(-25%);
   }
+
   50%,
   72% {
     transform: translateX(-50%);
   }
+
   75%,
   97% {
     transform: translateX(-75%);
   }
+
   100% {
     transform: translateX(-75%);
-  }
-}
-
-/* Dot animation for 3-slide carousel */
-@keyframes dot-active-3-1 {
-  0%,
-  28% {
-    background-color: #888888;
-  }
-  33%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
-
-@keyframes dot-active-3-2 {
-  0%,
-  28% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-  33%,
-  61% {
-    background-color: #888888;
-  }
-  66%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
-
-@keyframes dot-active-3-3 {
-  0%,
-  61% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-  66%,
-  100% {
-    background-color: #888888;
-  }
-}
-
-/* Dot animation for 4-slide carousel */
-@keyframes dot-active-4-1 {
-  0%,
-  22% {
-    background-color: #888888;
-  }
-  25%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
-
-@keyframes dot-active-4-2 {
-  0%,
-  22% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-  25%,
-  47% {
-    background-color: #888888;
-  }
-  50%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
-
-@keyframes dot-active-4-3 {
-  0%,
-  47% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-  50%,
-  72% {
-    background-color: #888888;
-  }
-  75%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
-
-@keyframes dot-active-4-4 {
-  0%,
-  72% {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-  75%,
-  100% {
-    background-color: #888888;
   }
 }
 
