@@ -1,49 +1,72 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector(".carousel");
-  const track = carousel.querySelector(".carousel__track");
-  const slides = Array.from(track.children);
-  const prevButton = carousel.querySelector(".carousel-button--prev");
-  const nextButton = carousel.querySelector(".carousel-button--next");
+  const carousels = document.querySelectorAll(".waste-solutions .carousel");
 
-  if (!carousel || !track || !prevButton || !nextButton || slides.length === 0) {
-    return;
-  }
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector(".carousel__track");
+    if (!track) return;
 
-  let currentIndex = 0;
-  const totalSlides = slides.length;
-
-  function updateCarousel() {
-    // Each slide occupies 100% of the carousel__container width
-    // The carousel__container is designed to show one item at a time
-    // So the slideWidth should be the width of the carousel__container
-    const carouselContainer = carousel.querySelector(".carousel__container");
-    const slideWidth = carouselContainer.offsetWidth; 
+    const slides = Array.from(track.children);
+    const prevButton = carousel.querySelector(".carousel-button--prev");
+    const nextButton = carousel.querySelector(".carousel-button--next");
+    const dotsContainer = carousel.querySelector('.carousel__dots');
     
-    const newTransform = -currentIndex * slideWidth;
-    track.style.transform = `translateX(${newTransform}px)`;
-
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex >= totalSlides - 1;
-  }
-
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < totalSlides - 1) {
-      currentIndex++;
-      updateCarousel();
+    if (!prevButton || !nextButton || slides.length === 0) {
+      return;
     }
-  });
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let autoSlideInterval;
 
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
+    track.style.width = `${totalSlides * 100}%`;
+    slides.forEach(slide => {
+      slide.style.width = `${100 / totalSlides}%`;
+    });
+
+    const updateCarousel = () => {
+      const translatePercentage = -(currentIndex * (100 / totalSlides));
+      track.style.transform = `translateX(${translatePercentage}%)`;
+
+      if (dotsContainer) {
+        const dots = Array.from(dotsContainer.children);
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+    };
+
+    const startAutoSlide = () => {
+      stopAutoSlide(); // Ensure no multiple intervals are running
+      autoSlideInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      }, 4000); // Change slide every 4 seconds
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(autoSlideInterval);
+    };
+
+    nextButton.addEventListener("click", () => {
+      stopAutoSlide();
+      currentIndex = (currentIndex + 1) % totalSlides;
       updateCarousel();
-    }
+      startAutoSlide();
+    });
+
+    prevButton.addEventListener("click", () => {
+      stopAutoSlide();
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+      startAutoSlide();
+    });
+
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+
+    // Initial setup
+    updateCarousel();
+    startAutoSlide();
   });
-
-  // Recalculate on window resize
-  window.addEventListener("resize", updateCarousel);
-
-  // Initial setup
-  updateCarousel();
 });
