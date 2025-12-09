@@ -124,7 +124,7 @@
   background-color: var(--color-bg-white);
   border-radius: var(--border-radius-base);
   box-shadow: var(--shadow-card);
-  padding: 3rem;
+  padding: 3rem 3rem 1rem 3rem;
   display: flex;
   min-height: var(--section-height-standard);
   gap: var(--spacing-card);
@@ -176,6 +176,11 @@
   line-height: 60px;
   font-size: 42px;
   color: var(--color-text-primary);
+}
+
+.service-card__footer {
+  line-height: 28px;
+  font-size: 18px;
 }
 
 .service-card__description {
@@ -531,17 +536,14 @@
     font-size: 18px;
   }
 
+  .service-card__footer {
+    line-height: 20px;
+    font-size: 10px;
+  }
+
   .service-card__description {
     font-size: 14px;
     margin-top: 0 !important;
-  }
-
-  .service-card__footer {
-    font-size: 10px;
-    text-align: left;
-    width: 70%;
-    left: 0;
-    bottom: 0;
   }
 
   .mobile-only {
