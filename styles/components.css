@@ -73,6 +73,10 @@
   margin-bottom: 5px;
 }
 
+.stats-card__header_mobile {
+  display: none;
+}
+
 .stats-card__label {
   font-size: 24px;
   font-weight: 400;
@@ -152,6 +156,11 @@
   position: relative;
 }
 
+.service-card__content.space-between {
+  justify-content: space-between;
+  gap: 3rem;
+}
+
 .service-card__content p {
   margin: 0;
   color: var(--color-text-inverse);
@@ -175,12 +184,6 @@
   margin-top: 3rem !important;
   line-height: 48px !important;
   text-wrap: pretty;
-}
-
-.service-card__footer {
-  position: absolute;
-  bottom: 1rem;
-  font-size: 18px;
 }
 
 /* Buttons */
@@ -440,6 +443,13 @@
   h2 {
     font-size: 1.8rem;
   }
+
+  .stats-card__header .stats-card__label {
+    display: none;
+  }
+  .stats-card__header_mobile {
+    display: block !important;
+  }
 }
 
 /* ============================================
@@ -480,12 +490,6 @@
     margin-bottom: 5px;
   }
 
-  .stats-card__header .stats-card__label {
-    display: inline;
-    margin-right: 5px;
-    font-size: 18px;
-  }
-
   .stats-card__label {
     font-size: 1rem;
   }
@@ -517,6 +521,7 @@
     text-align: center;
     padding: 0;
     height: 100%;
+    width: 100%;
   }
 
   .service-card__title {

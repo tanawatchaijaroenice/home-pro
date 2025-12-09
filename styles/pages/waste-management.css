@@ -250,6 +250,9 @@
   font-weight: 600;
   margin-bottom: var(--spacing-base);
 }
+.waste-solutions h2.center {
+  text-align: center;
+}
 
 .waste-solutions__grid {
   display: grid;
@@ -422,6 +425,7 @@
 
   .waste-solutions h2 {
     font-size: 32px;
+    text-align: center;
   }
 
   .waste-solutions__grid {
