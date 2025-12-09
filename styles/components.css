@@ -249,21 +249,12 @@
   transition: transform var(--transition-slow);
 }
 
-/* 4-item carousel track */
-.carousel__track:has(.carousel__item:nth-child(4)) {
-}
-
 .carousel__container:hover .carousel__track {
   animation-play-state: paused;
 }
 .carousel__item {
   width: 100%; /* Ensure each item takes full width of the container */
   flex-shrink: 0;
-}
-
-/* 4-item carousel items */
-.carousel__track:has(.carousel__item:nth-child(4)) .carousel__item {
-  /* width: 25%; -- This will be handled by JS */
 }
 
 .carousel__item img {

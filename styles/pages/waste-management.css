@@ -246,7 +246,7 @@
 /* Waste Solutions */
 .waste-solutions h2 {
   font-size: 72px;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
   margin-bottom: var(--spacing-base);
 }
