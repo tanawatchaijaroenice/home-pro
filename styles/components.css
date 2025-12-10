@@ -605,69 +605,34 @@
 
   .carousel__container {
     height: 35rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    /* Properties for manual scrolling have been removed. */
+    /* The auto-slide animation from the desktop styles will now apply. */
   }
 
   .carousel__container::-webkit-scrollbar {
     display: none;
   }
 
-  .carousel__track {
-    animation: none;
-    width: auto;
-  }
-  .carousel__item {
-    width: 100%;
-    scroll-snap-align: start;
-  }
+  /*
+    The conflicting rules for .carousel__track and .carousel__item
+    have been removed. The desktop's animation-based styles will now
+    cascade down and apply correctly on mobile.
+  */
 
   h2 {
     font-size: 1.5rem;
   }
 
-  /* 1. บังคับ Track ให้กว้าง 300% เสมอ (สำหรับ 3 รูป) */
-  /* ถ้าไม่บังคับตรงนี้ บางทีมือถือจะบีบเหลือ 100% ทำให้รูปยัดกัน */
-  .carousel__track {
-    display: flex;
-    width: 300% !important;
-    min-width: 300%; /* กันเหนียว */
-    animation: auto-slide 7.5s infinite ease-in-out !important; /* บังคับให้ Slide ทำงาน */
-  }
 
-  /* 2. บังคับ Item ให้กว้าง 1 ใน 3 ของ Track */
-  .carousel__item,
-  .carousel__slide {
-    width: 33.3333% !important;
-    flex: 0 0 33.3333% !important;
-  }
-
-  /* 3. กรณีมี 4 รูป: ต้องขยาย Track เป็น 400% */
-  .carousel__track:has(.carousel__item:nth-child(4)),
-  .carousel__track:has(.carousel__slide:nth-child(4)) {
-    width: 400% !important;
-    min-width: 400%;
-    animation: auto-slide-4 10s infinite ease-in-out !important;
-  }
-
-  /* 4. กรณีมี 4 รูป: Item ต้องเหลือ 25% */
-  .carousel__track:has(.carousel__item:nth-child(4)) .carousel__item,
-  .carousel__track:has(.carousel__slide:nth-child(4)) .carousel__slide {
-    width: 25% !important;
-    flex: 0 0 25% !important;
-  }
-
-  /* 5. แก้เรื่องแตะแล้วหยุด Slide */
+  /* Correct the pause behavior on touch (which triggers hover on mobile) */
   .carousel:hover .carousel__track,
-  .carousel:hover .carousel__dot {
-    animation-play-state: running !important;
+  .carousel__container:hover .carousel__track,
+  .carousel:hover .carousel__dot,
+  .carousel__container:hover .carousel__dot {
+    animation-play-state: paused;
   }
 
-  /* 6. จัดการรูปภาพให้เต็มกล่อง */
+  /* Ensure the image within the item fills the container */
   .carousel__item img {
     width: 100%;
     height: 100%;
