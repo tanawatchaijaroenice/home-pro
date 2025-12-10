@@ -252,18 +252,31 @@
 
 .carousel__track {
   display: flex;
+  width: 300%;
   height: 100%;
   transition: transform var(--transition-slow);
+  animation: auto-slide 7.5s infinite ease-in-out;
 }
-
+.carousel__track:has(.carousel__item:nth-child(4)),
+.carousel__track:has(.carousel__slide:nth-child(4)) {
+  width: 400%;
+  animation: auto-slide-4 10s infinite ease-in-out;
+}
 .carousel__container:hover .carousel__track {
   animation-play-state: paused;
 }
+.carousel__slide,
 .carousel__item {
-  width: 100%; /* Ensure each item takes full width of the container */
+  width: 33.3333%;
   flex-shrink: 0;
 }
+/* 4-item carousel items */
+.carousel__track:has(.carousel__item:nth-child(4)) .carousel__item,
+.carousel__track:has(.carousel__slide:nth-child(4)) .carousel__slide {
+  width: 25%;
+}
 
+.carousel__slide img,
 .carousel__item img {
   width: 100%;
   height: 100%;
