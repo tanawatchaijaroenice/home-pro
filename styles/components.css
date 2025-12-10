@@ -541,7 +541,7 @@
   }
 
   .stats-card__label {
-    font-size: 1rem;
+    font-size: 18px;
   }
 
   .stats-card__value {
@@ -622,7 +622,6 @@
   h2 {
     font-size: 1.5rem;
   }
-
 
   /* Correct the pause behavior on touch (which triggers hover on mobile) */
   .carousel:hover .carousel__track,
