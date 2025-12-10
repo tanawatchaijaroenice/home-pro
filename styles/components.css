@@ -314,6 +314,14 @@
   animation-play-state: paused;
 }
 
+/* 1. ล็อคความกว้างรูปไม่ให้เพี้ยนไม่ว่าจะจอเล็กแค่ไหน */
+.carousel__item,
+.carousel__slide {
+  flex-shrink: 0 !important; /* ห้ามหดเด็ดขาด */
+  flex-grow: 0 !important; /* ห้ามยืดเกิน */
+  min-height: 100%; /* บังคับความสูงเต็ม */
+}
+
 /* =========================================
    ส่วนนี้คือของใหม่: Animation สำหรับ Dot 
    (รองรับทั้ง 3 รูป และ 4 รูป อัตโนมัติ)
@@ -629,5 +637,23 @@
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  /* สั่งให้ Animation วิ่งตลอดเวลา ห้ามหยุดแม้จะเอาบิ้วแตะ */
+  .carousel__container:hover .carousel__track {
+    animation-play-state: running !important;
+  }
+
+  .carousel:hover .carousel__dot {
+    animation-play-state: running !important;
+  }
+
+  /* (Optional) ถ้าในมือถือรูปดูแบนหรือยืดเกินไป 
+     ให้กำหนดความสูงตายตัว หรือใช้ aspect-ratio */
+  .carousel__container {
+    /* ลองเปิดบรรทัดนี้ถ้าความสูงรูปยังเพี้ยนๆ */
+    /* height: 250px !important; */
+    /* หรือใช้ aspect-ratio */
+    /* aspect-ratio: 16 / 9; */
   }
 }
