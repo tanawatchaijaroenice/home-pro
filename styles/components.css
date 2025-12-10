@@ -371,14 +371,14 @@
   transition: all var(--transition-base);
 
   /* เริ่มต้นให้วิ่งจังหวะ 3 รูป (7.5s) */
-  animation: dot-active-3 7.5s infinite ease-in-out;
+  /* animation: dot-active-3 7.5s infinite ease-in-out; */
 }
 
 /* 5. ถ้า HTML มีจุดที่ 4 ให้เปลี่ยนไปใช้จังหวะ 4 รูป (10s) */
-.carousel__dots:has(.carousel__dot:nth-child(4)) .carousel__dot {
+/* .carousel__dots:has(.carousel__dot:nth-child(4)) .carousel__dot {
   animation-name: dot-active-4;
   animation-duration: 10s;
-}
+} */
 
 /* 6. ตั้ง Delay ให้จุดแต่ละลูกวิ่งตามกัน */
 .carousel__dot:nth-child(1) {
