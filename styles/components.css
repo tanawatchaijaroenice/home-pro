@@ -268,7 +268,9 @@
 .carousel__slide,
 .carousel__item {
   width: 33.3333%;
-  flex-shrink: 0;
+  flex-shrink: 0 !important; /* ห้ามหดเด็ดขาด */
+  flex-grow: 0 !important; /* ห้ามยืดเกิน */
+  min-height: 100%; /* บังคับความสูงเต็ม */
 }
 /* 4-item carousel items */
 .carousel__track:has(.carousel__item:nth-child(4)) .carousel__item,
@@ -312,14 +314,6 @@
 /* Pause dot animations on hover */
 .carousel__container:hover .carousel__dot {
   animation-play-state: paused;
-}
-
-/* 1. ล็อคความกว้างรูปไม่ให้เพี้ยนไม่ว่าจะจอเล็กแค่ไหน */
-.carousel__item,
-.carousel__slide {
-  flex-shrink: 0 !important; /* ห้ามหดเด็ดขาด */
-  flex-grow: 0 !important; /* ห้ามยืดเกิน */
-  min-height: 100%; /* บังคับความสูงเต็ม */
 }
 
 /* =========================================
