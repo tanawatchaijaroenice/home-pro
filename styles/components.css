@@ -252,33 +252,38 @@
 
 .carousel__track {
   display: flex;
-  width: 300%;
   height: 100%;
-  transition: transform var(--transition-slow);
-  animation: auto-slide 7.5s infinite ease-in-out;
+  will-change: transform;
 }
-.carousel__track:has(.carousel__item:nth-child(4)),
-.carousel__track:has(.carousel__slide:nth-child(4)) {
+
+/* Modifier for 3-item carousel */
+.carousel__track--3-items {
+  width: 300%;
+  animation: auto-slide-3 7.5s infinite ease-in-out;
+}
+.carousel__track--3-items .carousel__item {
+  width: 33.3333%;
+}
+
+/* Modifier for 4-item carousel */
+.carousel__track--4-items {
   width: 400%;
   animation: auto-slide-4 10s infinite ease-in-out;
 }
-.carousel__container:hover .carousel__track {
-  animation-play-state: paused;
-}
-.carousel__slide,
-.carousel__item {
-  width: 33.3333%;
-  flex-shrink: 0 !important; /* ห้ามหดเด็ดขาด */
-  flex-grow: 0 !important; /* ห้ามยืดเกิน */
-  min-height: 100%; /* บังคับความสูงเต็ม */
-}
-/* 4-item carousel items */
-.carousel__track:has(.carousel__item:nth-child(4)) .carousel__item,
-.carousel__track:has(.carousel__slide:nth-child(4)) .carousel__slide {
+.carousel__track--4-items .carousel__item {
   width: 25%;
 }
 
-.carousel__slide img,
+.carousel__container:hover .carousel__track {
+  animation-play-state: paused;
+}
+
+.carousel__item {
+  flex-shrink: 0;
+  flex-grow: 0;
+  min-height: 100%;
+}
+
 .carousel__item img {
   width: 100%;
   height: 100%;
@@ -307,102 +312,8 @@
   transition: all var(--transition-base);
 }
 
-.carousel__dot.active {
-  background-color: var(--color-brand-green);
-}
-
-/* Pause dot animations on hover */
-.carousel__container:hover .carousel__dot {
-  animation-play-state: paused;
-}
-
-/* =========================================
-   ส่วนนี้คือของใหม่: Animation สำหรับ Dot 
-   (รองรับทั้ง 3 รูป และ 4 รูป อัตโนมัติ)
-   ========================================= */
-
-/* 1. Keyframes จังหวะ Dot สำหรับ 3 รูป (7.5 วิ) */
-@keyframes dot-active-3 {
-  0%,
-  30% {
-    background-color: var(--color-brand-green);
-    transform: scale(1.2);
-  }
-  33.33%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: scale(1);
-  }
-}
-
-/* 2. Keyframes จังหวะ Dot สำหรับ 4 รูป (10 วิ) */
-@keyframes dot-active-4 {
-  0%,
-  22% {
-    background-color: var(--color-brand-green);
-    transform: scale(1.2);
-  }
-  25%,
-  100% {
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: scale(1);
-  }
-}
-
-/* 3. จัดตำแหน่ง Container ของจุด */
-.carousel__dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-  align-items: center;
-}
-
-/* 4. สไตล์ของจุด และ Animation พื้นฐาน (Default = 3 รูป) */
-.carousel__dot {
-  height: 6px;
-  width: 6px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: default;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  transition: all var(--transition-base);
-
-  /* เริ่มต้นให้วิ่งจังหวะ 3 รูป (7.5s) */
-  /* animation: dot-active-3 7.5s infinite ease-in-out; */
-}
-
-/* 5. ถ้า HTML มีจุดที่ 4 ให้เปลี่ยนไปใช้จังหวะ 4 รูป (10s) */
-/* .carousel__dots:has(.carousel__dot:nth-child(4)) .carousel__dot {
-  animation-name: dot-active-4;
-  animation-duration: 10s;
-} */
-
-/* 6. ตั้ง Delay ให้จุดแต่ละลูกวิ่งตามกัน */
-.carousel__dot:nth-child(1) {
-  animation-delay: 0s;
-}
-.carousel__dot:nth-child(2) {
-  animation-delay: 2.5s;
-}
-.carousel__dot:nth-child(3) {
-  animation-delay: 5s;
-}
-.carousel__dot:nth-child(4) {
-  animation-delay: 7.5s;
-}
-
-/* 7. สั่งหยุดเมื่อเอาเมาส์ชี้ (สำคัญมาก) */
-.carousel:hover .carousel__dot {
-  animation-play-state: paused;
-}
-
 /* Keyframe Animations */
-@keyframes auto-slide {
+@keyframes auto-slide-3 {
   0%,
   28% {
     transform: translateX(0%);
@@ -423,7 +334,6 @@
   }
 }
 
-/* แก้ไข Keyframe 4 รูป ให้จังหวะมันเป๊ะขึ้น */
 @keyframes auto-slide-4 {
   0%,
   22% {
@@ -432,18 +342,18 @@
   25%,
   47% {
     transform: translateX(-25%);
-  } /* รูป 2 */
+  }
   50%,
   72% {
     transform: translateX(-50%);
-  } /* รูป 3 */
+  }
   75%,
   97% {
     transform: translateX(-75%);
-  } /* รูป 4 */
+  }
   100% {
     transform: translateX(-75%);
-  } /* ค้างรูป 4 แป๊บนึงแล้วดีดกลับ 0 */
+  }
 }
 
 /* ============================================
